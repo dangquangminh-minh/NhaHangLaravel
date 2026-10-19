@@ -1,0 +1,526 @@
+{
+  "title": "Xây dựng website quản lý nhà hàng và đặt món trực tuyến bằng Laravel và MySQL",
+  "status": "Giai đoạn B — chờ duyệt đề cương trước khi viết bản Word chính",
+  "decisions": {
+    "template": "Mặc định theo PROMPT WORD",
+    "administrativeFields": "[CẦN BỔ SUNG]",
+    "scope": "Sản phẩm Laravel cuối; bối cảnh C# trình bày ngắn",
+    "authorialVoice": "Dùng cách diễn đạt Báo cáo/Hệ thống; không tự khẳng định đóng góp của thành viên chưa biết",
+    "mainPageTarget": 45,
+    "mainPageAllowed": [
+      40,
+      50
+    ],
+    "sourceChangesAllowed": false,
+    "databaseChangesAllowed": false,
+    "reviewRoundLimit": 3
+  },
+  "sections": [
+    {
+      "key": "intro",
+      "title": "MỞ ĐẦU",
+      "pages": 3,
+      "figures": 0,
+      "tables": 0,
+      "evidence": [
+        "BC19",
+        "BC22",
+        "BC23",
+        "BC24"
+      ],
+      "headings": [
+        [
+          "H2",
+          "Lý do chọn đề tài và bối cảnh bài toán",
+          "Quản lý thực đơn, đặt món, theo dõi thực hiện và báo cáo. Giải thích nhu cầu bằng nghiệp vụ của dự án, không bịa khảo sát hay khách hàng thật."
+        ],
+        [
+          "H2",
+          "Mục tiêu, đối tượng và phạm vi",
+          "Mục tiêu kiểm chứng được, người truy cập/khách/nhân viên/chủ; giới hạn web Laragon, dữ liệu demo và thanh toán xác minh thủ công."
+        ],
+        [
+          "H2",
+          "Phương pháp thực hiện và bố cục báo cáo",
+          "Đọc source, phân tích ràng buộc, thiết kế, kiểm thử có chứng cứ. Nhắc ngắn bối cảnh chuyển từ C#, dùng bản Laravel hiện tại làm căn cứ."
+        ]
+      ]
+    },
+    {
+      "key": "ch1",
+      "title": "CHƯƠNG 1. TỔNG QUAN VÀ CƠ SỞ KỸ THUẬT",
+      "pages": 3,
+      "figures": 1,
+      "tables": 1,
+      "evidence": [
+        "BC01",
+        "BC05",
+        "BC19",
+        "BC20"
+      ],
+      "headings": [
+        [
+          "H2",
+          "1.1. Kiến trúc ứng dụng web và Laravel",
+          "Chỉ trình bày các khái niệm được dùng trong sản phẩm."
+        ],
+        [
+          "H3",
+          "1.1.1. MVC và chu trình xử lý request",
+          "Phân biệt route, middleware, Form Request, controller, model/service và Blade; giải thích bằng một request thực tế, gắn hình chu trình xử lý."
+        ],
+        [
+          "H3",
+          "1.1.2. Eloquent, Migration và Seeder",
+          "ORM/quan hệ, phiên bản hóa schema và dữ liệu mẫu; phân biệt migration với import dữ liệu thật."
+        ],
+        [
+          "H2",
+          "1.2. Nền tảng dữ liệu, bảo vệ truy cập và giao diện",
+          "Không mở rộng thành giáo trình PHP/MySQL chung."
+        ],
+        [
+          "H3",
+          "1.2.1. Khóa ngoại, transaction và dữ liệu tiền",
+          "Ý nghĩa FK, RESTRICT/CASCADE, transaction/khóa bản ghi, DECIMAL và số nguyên mức 1/100 đồng trong ứng dụng."
+        ],
+        [
+          "H3",
+          "1.2.2. Xác thực, phân quyền và Blade/Bootstrap",
+          "Phân biệt Auth với Gate/Policy, CSRF/validation; Blade dựng HTML và fetch fragment không biến ứng dụng thành SPA. Bảng phiên bản từ lock/tool thực tế."
+        ]
+      ]
+    },
+    {
+      "key": "ch2",
+      "title": "CHƯƠNG 2. PHÂN TÍCH YÊU CẦU VÀ NGHIỆP VỤ",
+      "pages": 8,
+      "figures": 2,
+      "tables": 12,
+      "evidence": [
+        "BC01",
+        "BC02",
+        "BC03",
+        "BC04",
+        "BC05",
+        "BC06",
+        "BC07",
+        "BC08",
+        "BC09",
+        "BC10",
+        "BC11",
+        "BC13",
+        "BC14",
+        "BC15",
+        "BC17"
+      ],
+      "headings": [
+        [
+          "H2",
+          "2.1. Phạm vi chức năng và đối tượng sử dụng",
+          "Xác định ranh giới hệ thống và ma trận quyền theo code."
+        ],
+        [
+          "H3",
+          "2.1.1. Các tác nhân và ma trận quyền",
+          "Khách vãng lai, User, nhóm nhân viên, Thu ngân và Chủ. Một tài khoản một role; bảy chức vụ không đồng nghĩa có bảy module/quyền riêng. Chỉ cashier/owner xem báo cáo."
+        ],
+        [
+          "H3",
+          "2.1.2. Yêu cầu chức năng và quy tắc chấp nhận",
+          "Bảng yêu cầu chính có mã, điều kiện và bằng chứng; giới hạn giỏ, giá, voucher, số bàn, trạng thái, xóa dữ liệu liên kết và quyền sở hữu. Yêu cầu phi chức năng là tiêu chí thiết kế, không biến thành kết quả đo chưa có."
+        ],
+        [
+          "H2",
+          "2.2. Mô hình UML Use Case",
+          "Hai sơ đồ vừa vùng in; actor, ranh giới, include/extend và điều kiện truy cập đúng."
+        ],
+        [
+          "H3",
+          "2.2.1. Use Case của người truy cập và khách hàng",
+          "Đăng ký/đăng nhập, thực đơn, giỏ, đặt món, báo chuyển khoản, đơn của mình, địa chỉ, voucher, đặt bàn và đánh giá."
+        ],
+        [
+          "H3",
+          "2.2.2. Use Case của nhân viên, Thu ngân và Chủ",
+          "Vận hành danh mục/đơn/tương tác, thêm/xóa khách; chỉ chủ quản lý nhân viên/voucher, chỉ chủ/thu ngân báo cáo. Không vẽ actor ngân hàng tích hợp vì hệ thống chưa có API ngân hàng."
+        ],
+        [
+          "H2",
+          "2.3. Đặc tả các use case chính",
+          "Mỗi UC có mục tiêu, actor, tiền/hậu điều kiện, luồng chính, thay thế/lỗi và liên hệ quy tắc; không chỉ liệt kê nút."
+        ],
+        [
+          "H3",
+          "2.3.1. UC01 — Đăng nhập, đăng ký và đăng xuất",
+          "Session/hash, đăng ký User, thông tin sai/rate limit, invalidation."
+        ],
+        [
+          "H3",
+          "2.3.2. UC02 — Quản lý loại món và món ăn",
+          "CRUD quan hệ, validation, ảnh và chặn xóa đang tham chiếu; phân biệt xóa với ngừng phục vụ."
+        ],
+        [
+          "H3",
+          "2.3.3. UC03 — Quản lý giỏ và đặt món",
+          "Nhập số lượng/zero, giá từ server, bàn hoặc địa chỉ, token, voucher, rollback và kết quả chờ xác nhận."
+        ],
+        [
+          "H3",
+          "2.3.4. UC04 — Báo chuyển khoản và xác minh tiền",
+          "QR trước chi tiết, khách báo và nhân viên xác minh là hai hành động; không tự thay bước thực hiện."
+        ],
+        [
+          "H3",
+          "2.3.5. UC05 — Chuyển trạng thái và hủy đơn",
+          "COD/online, cấm quay ngược/nhảy bước, khách hủy ở bước 1; hủy sau nhận tiền cần xử lý hoàn tiền thủ công."
+        ],
+        [
+          "H3",
+          "2.3.6. UC06 — Đặt bàn và kiểm tra email",
+          "Số bàn 1–200, khung giữ 120 phút, chồng giờ, email và đơn đang phục vụ; không coi là sơ đồ bàn/sức chứa."
+        ],
+        [
+          "H3",
+          "2.3.7. UC07 — Tính điểm, đổi và dùng voucher",
+          "Điểm từ đơn hoàn tất trả tiền, trừ points_spent, tồn/hạn/mã sở hữu, snapshot và dùng một lần."
+        ],
+        [
+          "H3",
+          "2.3.8. UC08 — Hồ sơ, địa chỉ, đánh giá và liên hệ",
+          "Quyền sở hữu và mặc định địa chỉ; đổi mật khẩu cần mật khẩu cũ; liên hệ không được gọi là chat thời gian thực."
+        ],
+        [
+          "H3",
+          "2.3.9. UC09 — Quản lý nhân viên và khách hàng",
+          "Vai trò owner không có trong danh sách tạo nhân viên; quản trị không sửa khách, tài khoản tham chiếu không xóa được."
+        ],
+        [
+          "H3",
+          "2.3.10. UC10 — Xem báo cáo doanh thu",
+          "Chỉ owner/cashier; kỳ tối đa 366 ngày; doanh thu sau giảm, doanh số món trước giảm và số đơn hoàn tất."
+        ]
+      ]
+    },
+    {
+      "key": "ch3",
+      "title": "CHƯƠNG 3. THIẾT KẾ HỆ THỐNG VÀ CƠ SỞ DỮ LIỆU",
+      "pages": 12,
+      "figures": 5,
+      "tables": 7,
+      "evidence": [
+        "BC03",
+        "BC05",
+        "BC08",
+        "BC10",
+        "BC11",
+        "BC12",
+        "BC13",
+        "BC14",
+        "BC15",
+        "BC17",
+        "BC19",
+        "BC20"
+      ],
+      "headings": [
+        [
+          "H2",
+          "3.1. Kiến trúc và tổ chức các thành phần",
+          "Trình bày thiết kế thực tế, không thêm tầng kiến trúc giả."
+        ],
+        [
+          "H3",
+          "3.1.1. Mô hình triển khai và cấu trúc MVC",
+          "Trình duyệt → Apache/PHP → Laravel → MySQL; document root public, asset cục bộ, storage và các module hiện có."
+        ],
+        [
+          "H3",
+          "3.1.2. Ranh giới controller, service và policy",
+          "CRUD đơn giản ở controller; OrderService, TableBookingService, LoyaltyService cho giao dịch; Gate và Policy theo tài nguyên."
+        ],
+        [
+          "H2",
+          "3.2. Mô hình dữ liệu và quan hệ Eloquent",
+          "ERD tổng quan và phần trọng tâm giúp đọc được ở khổ A4."
+        ],
+        [
+          "H3",
+          "3.2.1. Nhóm thực thể và ERD tổng quan",
+          "16 bảng nghiệp vụ/xác thực, 7 bảng hạ tầng. Cardinality, FK nullable, một role/user và một redemption/tối đa một đơn đang gắn mã."
+        ],
+        [
+          "H3",
+          "3.2.2. Nhóm tài khoản, danh mục, món ăn và ảnh",
+          "Phụ thuộc roles/users, categories/suppliers/dishes/dish_images; unique tên/email, RESTRICT và ngoại lệ CASCADE album."
+        ],
+        [
+          "H3",
+          "3.2.3. Nhóm đơn hàng, dòng đơn, thanh toán và bàn",
+          "orders/order_items/order_statuses/dining_tables/reservations; snapshot tên/giá/địa chỉ; trường báo tiền/xác minh, người xử lý và người xác minh."
+        ],
+        [
+          "H3",
+          "3.2.4. Nhóm voucher và tương tác khách hàng",
+          "vouchers/redemptions/addresses/contacts/reviews; điểm đã dùng, mã một lần, đánh giá unique theo khách/món, FK giữ lịch sử."
+        ],
+        [
+          "H2",
+          "3.3. Thiết kế vật lý và bảo toàn dữ liệu",
+          "Phân biệt ràng buộc DB với điều kiện chỉ nằm trong ứng dụng."
+        ],
+        [
+          "H3",
+          "3.3.1. Kiểu dữ liệu, khóa và chỉ mục",
+          "DECIMAL(18,2), unsigned key, enum/boolean, timestamp, unique composite/index; bảng tóm tắt chính trong chương, từ điển đủ cột của 23 bảng ở phụ lục."
+        ],
+        [
+          "H3",
+          "3.3.2. Số tiền, snapshot và chiến lược xóa",
+          "Tính tiền nguyên 1/100 đồng, giữ phần lẻ có nghĩa; tránh mất đơn lịch sử; không tuyên bố soft delete khi code dùng từ chối xóa."
+        ],
+        [
+          "H2",
+          "3.4. Thiết kế luồng giao dịch và máy trạng thái",
+          "Kết hợp sơ đồ với bảng điều kiện cụ thể."
+        ],
+        [
+          "H3",
+          "3.4.1. Sequence đặt món và xử lý rollback",
+          "Kiểm token, khóa khách/món/mã, tính giá, snapshot, ghi nhiều bảng và consume voucher; thất bại rollback, không tin tổng tiền client."
+        ],
+        [
+          "H3",
+          "3.4.2. Trạng thái thực hiện, trạng thái thanh toán và đặt bàn",
+          "Sơ đồ trạng thái COD/online và bảng điều kiện báo/xác minh/hủy; mô tả khóa bàn/khung thời gian bằng quy tắc, không quảng bá là đã stress test."
+        ],
+        [
+          "H2",
+          "3.5. Thiết kế giao diện và bảo vệ truy cập",
+          "Mục này là quyết định thiết kế; cách cài cụ thể ở chương 4."
+        ],
+        [
+          "H3",
+          "3.5.1. Layout, form, bảng và trạng thái phản hồi",
+          "Token, sidebar/drawer, lỗi dưới ô, xác nhận xóa, rỗng/lỗi/loading, responsive và reduced motion; không lặp bộ ảnh triển khai."
+        ],
+        [
+          "H3",
+          "3.5.2. Kiểm tra quyền và dữ liệu không tin cậy",
+          "Middleware/Gate/Policy, whitelist/validated, CSRF, escape HTML và ảnh upload; địa chỉ mặc định được giữ bằng transaction, không có unique index có điều kiện."
+        ]
+      ]
+    },
+    {
+      "key": "ch4",
+      "title": "CHƯƠNG 4. TRIỂN KHAI CÁC CHỨC NĂNG CHÍNH",
+      "pages": 10,
+      "figures": 7,
+      "tables": 3,
+      "evidence": [
+        "BC01",
+        "BC02",
+        "BC04",
+        "BC05",
+        "BC06",
+        "BC07",
+        "BC08",
+        "BC09",
+        "BC10",
+        "BC11",
+        "BC13",
+        "BC14",
+        "BC15",
+        "BC17",
+        "BC20",
+        "BC21"
+      ],
+      "headings": [
+        [
+          "H2",
+          "4.1. Môi trường và tổ chức triển khai",
+          "Theo dependency lock và cấu hình mẫu; không đưa bí mật."
+        ],
+        [
+          "H3",
+          "4.1.1. Công nghệ, thư mục và cấu hình Laragon",
+          "PHP/Laravel/MySQL, Blade/Bootstrap, document root public, dependency PHP và không cần build Node; không chép APP_KEY/mật khẩu/chuỗi kết nối thật."
+        ],
+        [
+          "H3",
+          "4.1.2. Migration, dữ liệu demo và các nhóm route",
+          "Thứ tự tạo dữ liệu, bảo vệ seeder không ghi đè; route auth/role/can, scope truy vấn; không gọi seed là import dữ liệu cũ."
+        ],
+        [
+          "H2",
+          "4.2. Xác thực, tài khoản và CRUD danh mục",
+          "Có trích đoạn ngắn quan trọng, giải thích tác dụng và trường hợp lỗi."
+        ],
+        [
+          "H3",
+          "4.2.1. Session Auth, quyền báo cáo và quản lý tài khoản",
+          "Auth attempt/regenerate, hashed cast, Gate view-reports; khách tự sửa hồ sơ, quản trị không sửa hồ sơ khách."
+        ],
+        [
+          "H3",
+          "4.2.2. Loại món, món ăn, ảnh và validation",
+          "Hai bảng CRUD có quan hệ, Form Request unique/FK, safe data, lựa chọn tên, xóa liên kết; ảnh lỗi validation và form từ hệ thống thật."
+        ],
+        [
+          "H2",
+          "4.3. Thực đơn, giỏ hàng và đơn hàng",
+          "Không mô tả fetch như SPA; không lặp phần đặc tả UC."
+        ],
+        [
+          "H3",
+          "4.3.1. Tìm kiếm trực tiếp, lọc, phân trang và số lượng",
+          "Debounce/AbortController/version, giữ điều kiện/focus, retry, input số lượng và xác nhận zero."
+        ],
+        [
+          "H3",
+          "4.3.2. Checkout, QR và quản lý trạng thái",
+          "Transaction, snapshot và token; màn hình QR trước, báo/chứng thực tiền riêng; thao tác tiến bước và hủy. Dùng sơ đồ/mô tả thay ảnh QR chứa thông tin ngân hàng thật."
+        ],
+        [
+          "H2",
+          "4.4. Chức năng bổ trợ, báo cáo và giao diện dùng chung",
+          "Chỉ chọn các đoạn code có ý nghĩa nghiệp vụ, code dài chuyển phụ lục."
+        ],
+        [
+          "H3",
+          "4.4.1. Đặt bàn, địa chỉ, đánh giá, điểm và voucher",
+          "Kiểm email giữ bàn; quyền sở hữu; tính điểm và mã theo snapshot; không mô tả thành CRM/kho hoặc chatbot."
+        ],
+        [
+          "H3",
+          "4.4.2. Thống kê, responsive và phản hồi thao tác",
+          "Truy vấn is_paid + trạng thái 4/6, created_at; biểu đồ và bảng chi tiết, token UI, modal, focus, skeleton/retry và ảnh mobile thật."
+        ]
+      ]
+    },
+    {
+      "key": "ch5",
+      "title": "CHƯƠNG 5. KIỂM THỬ, ĐÁNH GIÁ VÀ HẠN CHẾ",
+      "pages": 7,
+      "figures": 0,
+      "tables": 6,
+      "evidence": [
+        "BC01",
+        "BC02",
+        "BC04",
+        "BC05",
+        "BC07",
+        "BC08",
+        "BC09",
+        "BC10",
+        "BC11",
+        "BC13",
+        "BC14",
+        "BC16",
+        "BC17",
+        "BC18",
+        "BC20",
+        "BC21",
+        "BC22",
+        "BC23",
+        "BC24"
+      ],
+      "headings": [
+        [
+          "H2",
+          "5.1. Cơ sở và phương pháp kiểm thử",
+          "Nêu rõ bằng chứng từ lần thực thi trước, không tự nhận đã chạy lại khi viết Word."
+        ],
+        [
+          "H3",
+          "5.1.1. Môi trường tách biệt và dữ liệu kiểm thử",
+          "SQLite :memory:, MySQL *_feature_test, guard trong TestCase, fixture/factory; tránh database demo và dữ liệu thật."
+        ],
+        [
+          "H3",
+          "5.1.2. Tiêu chí chọn ca và liên kết yêu cầu",
+          "Nhóm chính: quyền/ownership, CRUD/FK, validation, tổng tiền, rollback/replay, QR/trạng thái, booking và UI. Bảng ca kiểm có đầu vào, bước, mong đợi, thực tế và trạng thái."
+        ],
+        [
+          "H2",
+          "5.2. Kết quả có bằng chứng và phân tích",
+          "Không lặp nguyên bảng bằng chứng A vào nội dung báo cáo."
+        ],
+        [
+          "H3",
+          "5.2.1. PHPUnit trên SQLite và MySQL",
+          "Mỗi hệ 118 tests, 598 assertions, 0 failures/errors trong XML đã lưu; không gọi 236 tests khác nhau. Phân tích ca lỗi/rollback/quyền tiêu biểu, không bịa coverage."
+        ],
+        [
+          "H3",
+          "5.2.2. Chrome, responsive và các tương tác chính",
+          "71 + 16 + 15 = 102 checks; viewport 360/768/1024/1440, nhập 49, zero cancel/accept, QR-first, retry/focus. Không coi là khảo sát người dùng hoặc thử mọi trình duyệt."
+        ],
+        [
+          "H2",
+          "5.3. Đối chiếu mục tiêu và giới hạn",
+          "Các phát hiện trong source phải tách khỏi các chức năng đã kiểm thử."
+        ],
+        [
+          "H3",
+          "5.3.1. Mức đáp ứng và kịch bản demo",
+          "Bảng yêu cầu → module/file → mức kiểm chứng; demo theo nghiệp vụ, không cần ghi tài khoản/mật khẩu trong báo cáo. Phân công thật để phụ lục điền."
+        ],
+        [
+          "H3",
+          "5.3.2. Vấn đề còn lại và hướng khắc phục",
+          "UI hồ sơ email đầy đủ, khác điều kiện top món trang chủ/thực đơn, danh mục thống kê hiện tại, thiếu đo tải/cross-browser, SMTP/ngân hàng/mobile/import chưa hoàn thiện. Chỉ đề xuất, không sửa source trong nhiệm vụ tài liệu."
+        ]
+      ]
+    },
+    {
+      "key": "conclusion",
+      "title": "KẾT LUẬN VÀ HƯỚNG PHÁT TRIỂN",
+      "pages": 2,
+      "figures": 0,
+      "tables": 0,
+      "evidence": [
+        "BC05",
+        "BC08",
+        "BC10",
+        "BC17",
+        "BC19",
+        "BC20",
+        "BC21",
+        "BC22",
+        "BC23"
+      ],
+      "headings": [
+        [
+          "H2",
+          "Kết quả đạt được và đóng góp của sản phẩm",
+          "Đối chiếu mục tiêu bằng thiết kế, code và bằng chứng kiểm thử; không khẳng định nhóm đã được GV duyệt hoặc từng thành viên đã làm việc gì."
+        ],
+        [
+          "H2",
+          "Giới hạn và các bước phát triển tiếp theo",
+          "Ưu tiên đồng nhất UI/rules, kiểm thử bổ sung, đối soát thanh toán/SMTP; chỉ mở rộng kho/mobile khi có yêu cầu và thiết kế riêng."
+        ]
+      ]
+    }
+  ],
+  "frontMatter": [
+    "Bìa và bìa phụ với trường/khoa/môn/GV/lớp/thành viên/MSSV [CẦN BỔ SUNG]",
+    "Lời cam đoan/lời cảm ơn: mẫu chờ nhóm xác nhận, không bịa đóng góp hoặc phê duyệt",
+    "Tóm tắt báo cáo",
+    "Mục lục tự động đến Heading 3",
+    "Danh mục hình, danh mục bảng bằng trường Caption",
+    "Danh mục từ viết tắt"
+  ],
+  "appendices": [
+    "A — Từ điển đủ cột/kiểu/PK/FK/NULL/unique và quan hệ cho 23 bảng; phân biệt 16 bảng nghiệp vụ/xác thực và 7 hạ tầng",
+    "B — Bảng test chi tiết và vị trí bằng chứng JUnit/JSON; trích đoạn code quan trọng khi cần",
+    "C — Hướng dẫn chạy Laragon, kịch bản demo và phân công thực tế để [CẦN BỔ SUNG]",
+    "D — Nguồn sơ đồ và hướng dẫn cập nhật TOC/PAGE/SEQ/REF trong Word"
+  ],
+  "output": {
+    "docx": "BaoCaoDoAn_QuanLyNhaHang_Laravel_MySQL.docx",
+    "pdf": "BaoCaoDoAn_QuanLyNhaHang_Laravel_MySQL.pdf",
+    "location": "Thư mục gốc dự án, cùng cấp README.md",
+    "sidecars": "docs: bảng bằng chứng, kiểm định và hướng dẫn cập nhật trường"
+  }
+}

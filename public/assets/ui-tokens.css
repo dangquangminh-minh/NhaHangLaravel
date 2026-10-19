@@ -1,0 +1,73 @@
+/* UI v1 — Token dùng chung cho ứng dụng và trang mẫu đã duyệt. */
+:root {
+    color-scheme: light;
+    --ui-primary: #1f5a43;
+    --ui-primary-hover: #174633;
+    --ui-primary-strong: #153c30;
+    --ui-primary-soft: #edf5ef;
+    --ui-primary-selected: #dcebdd;
+    --ui-accent: #9c4f25;
+    --ui-accent-soft: #fbf0e5;
+    --ui-success: #236244;
+    --ui-success-soft: #edf5ee;
+    --ui-warning: #825307;
+    --ui-warning-soft: #fff4dc;
+    --ui-danger: #b4313a;
+    --ui-danger-soft: #fff0f0;
+    --ui-info: #245c75;
+    --ui-info-soft: #edf5fb;
+    --ui-canvas: #f5f7f3;
+    --ui-surface: #ffffff;
+    --ui-surface-muted: #f0f3ee;
+    --ui-text: #1c3026;
+    --ui-text-muted: #58675e;
+    --ui-border: #dce4da;
+    --ui-border-input: #7c8b82;
+    --ui-inverse: #ffffff;
+    --ui-disabled-bg: #e6ebe4;
+    --ui-disabled-text: #536158;
+    --ui-shimmer-highlight: rgba(255, 255, 255, .55);
+    --ui-shadow-color: 24, 48, 40;
+    --ui-font: system-ui, -apple-system, 'Segoe UI', sans-serif;
+    --ui-text-xs: .75rem;
+    --ui-text-sm: .875rem;
+    --ui-text-base: 1rem;
+    --ui-text-lg: 1.25rem;
+    --ui-text-xl: 1.5rem;
+    --ui-text-2xl: 2rem;
+    --ui-weight-regular: 400;
+    --ui-weight-medium: 600;
+    --ui-weight-bold: 700;
+    --ui-leading: 1.55;
+    --ui-space-1: .25rem;
+    --ui-space-2: .5rem;
+    --ui-space-3: .75rem;
+    --ui-space-4: 1rem;
+    --ui-space-6: 1.5rem;
+    --ui-space-8: 2rem;
+    --ui-space-12: 3rem;
+    --ui-radius-sm: .5rem;
+    --ui-radius-md: .875rem;
+    --ui-radius-lg: 1.25rem;
+    --ui-shadow-sm: 0 1px 2px rgba(var(--ui-shadow-color), .04), 0 6px 20px rgba(var(--ui-shadow-color), .04);
+    --ui-shadow-md: 0 8px 28px rgba(var(--ui-shadow-color), .10);
+    --ui-focus: 0 0 0 3px var(--ui-surface), 0 0 0 5px var(--ui-primary);
+    --ui-touch-target: 44px;
+    --ui-control-height: 44px;
+    --ui-header-height: 72px;
+    --ui-content-max: 1440px;
+    --ui-stagger-step: 25ms;
+    --dur-fast: 120ms;
+    --dur-base: 200ms;
+    --dur-slow: 320ms;
+    --ease-out: cubic-bezier(.22, 1, .36, 1);
+    --ease-in-out: cubic-bezier(.4, 0, .2, 1);
+}
+:root[data-ui-motion='off'] {
+    --dur-fast: 0ms;
+    --dur-base: 0ms;
+    --dur-slow: 0ms;
+}
+@media (prefers-reduced-motion: reduce) {
+    :root { --dur-fast: 0ms; --dur-base: 0ms; --dur-slow: 0ms; }
+}

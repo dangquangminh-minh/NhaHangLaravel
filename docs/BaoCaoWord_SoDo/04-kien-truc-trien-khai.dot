@@ -1,0 +1,14 @@
+digraph G {
+graph [fontname="Times New Roman",fontsize=15,bgcolor="white",pad="0.18",nodesep="0.28",ranksep="0.35",dpi=220];
+node [fontname="Times New Roman",fontsize=14,shape=box,style="rounded,filled",fillcolor="#f3f6f3",color="#476354",margin="0.12,0.08"];
+edge [fontname="Times New Roman",fontsize=12,color="#476354"];
+rankdir=TB;
+a [label="Trình duyệt\nBlade HTML + Bootstrap + JavaScript"];
+subgraph cluster_app {label="Windows / Laragon — môi trường cục bộ";color="#789384";
+b [label="Apache\nDocumentRoot: public/"];
+c [label="PHP 8.3 / Laravel 13\nRoute, Gate/Policy, Controller, Service"];
+d [label="MySQL 8.4\nInnoDB / utf8mb4"];
+e [label="Tệp cục bộ\nAsset, ảnh upload, session"];
+b->c;c->d;c->e;{rank=same;d;e;}}
+a->b [label="HTTP"];
+}

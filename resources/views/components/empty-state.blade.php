@@ -1,0 +1,2 @@
+@props(['message'])
+<div class="ui-state app-empty-state"><span class="ui-state-icon"><svg class="ui-icon" aria-hidden="true"><use href="#icon-bag"/></svg></span><p class="mb-3">{{ $message }}</p>@if(request('q'))<p>Thử từ khóa khác hoặc để trống ô tìm kiếm để xem tất cả.</p><button type="button" class="btn btn-outline-primary" data-ui-focus-search>Chỉnh từ khóa</button>@endif</div>

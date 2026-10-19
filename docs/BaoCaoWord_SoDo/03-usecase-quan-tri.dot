@@ -1,0 +1,29 @@
+digraph G {
+graph [fontname="Times New Roman",fontsize=15,bgcolor="white",pad="0.18",nodesep="0.28",ranksep="0.35",dpi=220];
+node [fontname="Times New Roman",fontsize=14,shape=box,style="rounded,filled",fillcolor="#f3f6f3",color="#476354",margin="0.12,0.08"];
+edge [fontname="Times New Roman",fontsize=12,color="#476354"];
+rankdir=LR; nodesep=0.18; ranksep=0.45;
+staff [shape=plaintext,style="",label="«actor»\nNhân viên vận hành"];
+owner [shape=plaintext,style="",label="«actor»\nChủ nhà hàng"];
+cashier [shape=plaintext,style="",label="«actor»\nThu ngân"];
+{rank=same;staff;owner;cashier;}
+subgraph cluster_system {label="Hệ thống Nhà Hàng Ngon";fontsize=17;color="#476354";
+catalog [shape=ellipse,style=filled,label="CRUD loại / món / NCC"];
+orders [shape=ellipse,style=filled,label="Xử lý đơn / xác minh tiền"];
+support [shape=ellipse,style=filled,label="Đặt bàn /\nliên hệ / đánh giá"];
+customers [shape=ellipse,style=filled,label="Thêm / xem / xóa khách"];
+accounts [shape=ellipse,style=filled,label="Quản lý nhân viên"];
+offers [shape=ellipse,style=filled,label="Quản lý voucher"];
+stats [shape=ellipse,style=filled,label="Báo cáo doanh thu"];
+{rank=same;catalog;orders;support;customers;accounts;offers;stats;}
+}
+staff -> catalog [arrowhead=none];
+staff -> orders [arrowhead=none];
+staff -> support [arrowhead=none];
+staff -> customers [arrowhead=none];
+owner -> accounts [arrowhead=none];
+owner -> offers [arrowhead=none];
+owner -> stats [arrowhead=none];
+cashier -> stats [arrowhead=none];
+owner -> staff [constraint=false,arrowhead=empty];cashier -> staff [constraint=false,arrowhead=empty];
+}

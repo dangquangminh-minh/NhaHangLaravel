@@ -1,0 +1,14 @@
+digraph G {
+graph [fontname="Times New Roman",fontsize=15,bgcolor="white",pad="0.18",nodesep="0.28",ranksep="0.35",dpi=220];
+node [fontname="Times New Roman",fontsize=14,shape=box,style="rounded,filled",fillcolor="#f3f6f3",color="#476354",margin="0.12,0.08"];
+edge [fontname="Times New Roman",fontsize=12,color="#476354"];
+rankdir=TB;
+a [label="1 — Chờ xác nhận\nCOD hoặc online chưa xác minh"];
+p [label="Online: khách báo chuyển khoản\nNhân viên xác minh is_paid = true"];
+b [label="2 — Đang làm"];
+c [label="3 — Đang giao"];
+d [label="4 — Đã thanh toán\nKết thúc COD",peripheries=2];
+e [label="6 — Đã giao thành công\nKết thúc online",peripheries=2];
+x [label="5 — Đã hủy\nCần hoàn tiền nếu đã nhận",peripheries=2];
+a->p [label="Không đổi trạng thái"];p->a [style=dashed,label="Vẫn chờ",constraint=false];a->b [label="COD / online đã xác minh"];b->c;c->d [label="COD"];c->e [label="online"];a->x [label="Chủ đơn / nhân viên"];b->x [label="Nhân viên"];c->x [label="Nhân viên"];{rank=same;d;e;x;}
+}

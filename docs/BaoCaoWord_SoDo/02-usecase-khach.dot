@@ -1,0 +1,32 @@
+digraph G {
+graph [fontname="Times New Roman",fontsize=15,bgcolor="white",pad="0.18",nodesep="0.28",ranksep="0.35",dpi=220];
+node [fontname="Times New Roman",fontsize=14,shape=box,style="rounded,filled",fillcolor="#f3f6f3",color="#476354",margin="0.12,0.08"];
+edge [fontname="Times New Roman",fontsize=12,color="#476354"];
+rankdir=LR; nodesep=0.18; ranksep=0.45;
+guest [shape=plaintext,style="",label="«actor»\nNgười truy cập"];
+user [shape=plaintext,style="",label="«actor»\nKhách hàng (User)"];
+{rank=same;guest;user;}
+subgraph cluster_system {label="Hệ thống Nhà Hàng Ngon";fontsize=17;color="#476354";
+menu [shape=ellipse,style=filled,label="Xem / tìm thực đơn"];
+login [shape=ellipse,style=filled,label="Đăng nhập / đăng ký"];
+book [shape=ellipse,style=filled,label="Gửi đặt bàn / liên hệ"];
+cart [shape=ellipse,style=filled,label="Quản lý giỏ"];
+checkout [shape=ellipse,style=filled,label="Đặt món"];
+price [shape=ellipse,style=filled,label="Tính giá và lưu đơn"];
+voucher [shape=ellipse,style=filled,label="Áp dụng voucher"];
+report [shape=ellipse,style=filled,label="Báo chuyển khoản"];
+history [shape=ellipse,style=filled,label="Xem / hủy đơn của mình"];
+profile [shape=ellipse,style=filled,label="Hồ sơ /\nđịa chỉ / đánh giá"];
+{rank=same;menu;login;book;cart;checkout;report;history;profile;}
+{rank=same;price;voucher;}
+}
+guest -> menu [arrowhead=none];
+guest -> login [arrowhead=none];
+guest -> book [arrowhead=none];
+user -> cart [arrowhead=none];
+user -> checkout [arrowhead=none];
+user -> report [arrowhead=none];
+user -> history [arrowhead=none];
+user -> profile [arrowhead=none];
+user -> guest [constraint=false,arrowhead=empty,label="kế thừa"];checkout -> price [style=dashed,label="«include»"];voucher -> checkout [constraint=false,style=dashed,label="«extend»\n[có mã]"];
+}

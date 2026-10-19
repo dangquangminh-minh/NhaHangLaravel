@@ -1,0 +1,5 @@
+@extends('layouts.app')
+@section('title','Lưu địa chỉ giao hàng')
+@section('content')
+<form method="post" action="{{ $record->exists ? route('addresses.update',$record) : route('addresses.store') }}" class="card card-body p-4 form-panel">@csrf @if($record->exists)@method('PUT')@endif<h1 class="h3 mb-4">{{ $record->exists ? 'Cập nhật' : 'Thêm' }} địa chỉ</h1><x-field name="recipient_name" label="Tên người nhận" :value="$record->recipient_name" maxlength="100" required /><x-field name="phone" label="Số điện thoại người nhận" type="tel" :value="$record->phone" required /><x-field name="address" label="Địa chỉ chi tiết" type="textarea" :value="$record->address" maxlength="255" required /><x-field name="is_default" label="Đặt làm mặc định" type="select" :value="(int)$record->is_default" :options="[0=>'Không',1=>'Có']" required /><p class="text-muted small">Địa chỉ đầu tiên được đặt làm mặc định. Hệ thống luôn giữ một địa chỉ mặc định khi bạn còn địa chỉ.</p><div class="action-row"><button class="btn btn-primary">Lưu địa chỉ</button><a class="btn btn-outline-secondary" href="{{ route('addresses.index') }}">Quay lại</a></div></form>
+@endsection

@@ -1,0 +1,26 @@
+digraph G {
+graph [fontname="Times New Roman",fontsize=15,bgcolor="white",pad="0.18",nodesep="0.28",ranksep="0.35",dpi=220];
+node [fontname="Times New Roman",fontsize=14,shape=box,style="rounded,filled",fillcolor="#f3f6f3",color="#476354",margin="0.12,0.08"];
+edge [fontname="Times New Roman",fontsize=12,color="#476354"];
+rankdir=TB; nodesep=0.15; ranksep=0.35;
+users [shape=record,style=filled,label="{users|PK id\l}"];
+orders [shape=record,style=filled,label="{orders|PK id\lFK user_id\lFK status / bàn / mã?\lFK người xử lý? / xác minh?\l}"];
+order_items [shape=record,style=filled,label="{order_items|PK id\lFK order_id / dish_id\lUK (order_id,dish_id)\l}"];
+voucher_redemptions [shape=record,style=filled,label="{voucher_redemptions|PK id; UK code\lFK user_id / voucher_id\l}"];
+vouchers [shape=record,style=filled,label="{vouchers|PK id\l}"];
+dining_tables [shape=record,style=filled,label="{dining_tables|PK number\l}"];
+reservations [shape=record,style=filled,label="{reservations|PK id\lFK user_id? / bàn?\l}"];
+order_statuses [shape=record,style=filled,label="{order_statuses|PK id\l}"];
+dishes [shape=record,style=filled,label="{dishes|PK id\l}"];
+users -> orders [label="1:n",arrowhead=none];
+orders -> order_items [label="1:n",arrowhead=none];
+dishes -> order_items [label="1:n",arrowhead=none];
+users -> voucher_redemptions [label="1:n",arrowhead=none];
+vouchers -> voucher_redemptions [label="1:n",arrowhead=none];
+voucher_redemptions -> orders [label="0..1:0..1",arrowhead=none];
+dining_tables -> orders [label="0..1:n",arrowhead=none];
+dining_tables -> reservations [label="0..1:n",arrowhead=none];
+order_statuses -> orders [label="1:n",arrowhead=none];
+users -> reservations [label="0..1:n",arrowhead=none];
+users -> orders [style=dashed,label="xử lý / xác minh",arrowhead=none,constraint=false];
+}

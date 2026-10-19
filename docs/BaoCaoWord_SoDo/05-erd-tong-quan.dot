@@ -1,0 +1,41 @@
+digraph G {
+graph [fontname="Times New Roman",fontsize=15,bgcolor="white",pad="0.18",nodesep="0.28",ranksep="0.35",dpi=220];
+node [fontname="Times New Roman",fontsize=14,shape=box,style="rounded,filled",fillcolor="#f3f6f3",color="#476354",margin="0.12,0.08"];
+edge [fontname="Times New Roman",fontsize=12,color="#476354"];
+rankdir=TB; nodesep=0.12; ranksep=0.3;
+{rank=same;roles;categories;suppliers;vouchers;} {rank=same;users;dishes;dining_tables;order_statuses;} {rank=same;addresses;reviews;reservations;voucher_redemptions;} {rank=same;dish_images;orders;contacts;}
+roles [shape=box,label="roles",fontsize=16];
+users [shape=box,label="users",fontsize=16];
+categories [shape=box,label="categories",fontsize=16];
+suppliers [shape=box,label="suppliers",fontsize=16];
+dishes [shape=box,label="dishes",fontsize=16];
+dish_images [shape=box,label="dish_images",fontsize=16];
+orders [shape=box,label="orders",fontsize=16];
+order_items [shape=box,label="order_items",fontsize=16];
+vouchers [shape=box,label="vouchers",fontsize=16];
+voucher_redemptions [shape=box,label="voucher_redemptions",fontsize=16];
+dining_tables [shape=box,label="dining_tables",fontsize=16];
+reservations [shape=box,label="reservations",fontsize=16];
+addresses [shape=box,label="addresses",fontsize=16];
+reviews [shape=box,label="reviews",fontsize=16];
+order_statuses [shape=box,label="order_statuses",fontsize=16];
+contacts [shape=box,label="contacts",fontsize=16];
+roles -> users [label="1:n",arrowhead=none];
+users -> orders [label="1:n",arrowhead=none];
+categories -> dishes [label="1:n",arrowhead=none];
+suppliers -> dishes [label="1:n",arrowhead=none];
+dishes -> dish_images [label="1:n",arrowhead=none];
+orders -> order_items [label="1:n",arrowhead=none];
+dishes -> order_items [label="1:n",arrowhead=none];
+users -> voucher_redemptions [label="1:n",arrowhead=none];
+vouchers -> voucher_redemptions [label="1:n",arrowhead=none];
+dining_tables -> reservations [label="0..1:n",arrowhead=none];
+users -> addresses [label="1:n",arrowhead=none];
+users -> reviews [label="1:n",arrowhead=none];
+dishes -> reviews [label="1:n",arrowhead=none];
+order_statuses -> orders [label="1:n",arrowhead=none];
+users -> reservations [label="0..1:n",arrowhead=none];
+dining_tables -> orders [label="0..1:n",arrowhead=none];
+voucher_redemptions -> orders [label="0..1:0..1",arrowhead=none];
+users -> orders [style=dashed,label="xử lý / xác minh",arrowhead=none,constraint=false];
+}

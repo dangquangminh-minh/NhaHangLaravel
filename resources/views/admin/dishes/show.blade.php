@@ -1,0 +1,5 @@
+@extends('layouts.app')
+@section('title',$record->name)
+@section('content')
+<div class="card card-body p-4"><div class="row g-4"><div class="col-md-5"><img loading="lazy" decoding="async" class="dish-image-detail" src="{{ $record->imageUrl() }}" alt="{{ $record->name }}"><div class="action-row mt-3">@foreach($record->images as $image)<img loading="lazy" decoding="async" class="album-image" src="{{ asset($image->path) }}" alt="Ảnh album">@endforeach</div></div><div class="col-md-7"><h1 class="h2">{{ $record->name }}</h1><p>Mã #{{ $record->id }} · {{ $record->category->name }}</p><p>Nhà cung cấp: {{ $record->supplier->name }}</p><p class="price fs-3">{{ \App\Support\Money::format($record->price) }}đ</p><p>{{ $record->is_available ? 'Đang phục vụ' : 'Tạm ngừng phục vụ' }}</p><p class="preserve-lines">{{ $record->description }}</p><div class="action-row"><a class="btn btn-primary" href="{{ route('admin.dishes.edit',$record) }}">Chỉnh sửa</a><a class="btn btn-outline-secondary" href="{{ route('admin.dishes.index') }}">Quay lại</a><x-delete :action="route('admin.dishes.destroy',$record)" /></div></div></div></div>
+@endsection

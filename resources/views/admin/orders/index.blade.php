@@ -1,0 +1,9 @@
+@extends('layouts.app')
+@section('title','Quản lý trạng thái đơn')
+@section('content')
+<h1 class="h2 mb-3">Quản lý trạng thái đơn</h1><p class="text-muted">Gọi xác nhận → Đang làm → Đang giao → Hoàn tất. Mọi bước đều do nhân viên bấm, không tự chạy và không quay ngược.</p>@include('shared.search',['placeholder'=>'Mã đơn hoặc tên khách'])
+<div class="card table-responsive mb-4"><table class="table mb-0"><thead><tr><th scope="col">Đơn / khách hàng</th><th scope="col">Thông tin nhận món</th><th scope="col">Thanh toán</th><th scope="col">Trạng thái hiện tại</th><th scope="col">Thao tác tiếp theo</th></tr></thead><tbody class="ui-table-body">
+@forelse($records as $order)<tr><td><a href="{{ route('orders.show',$order) }}"><strong>#{{ $order->id }}</strong></a><div>{{ $order->user->name }}</div><small>{{ $order->user->phone }}</small><small class="d-block text-muted">{{ $order->created_at->format('d/m/Y H:i') }}</small></td><td>{{ $order->table_number ? 'Bàn '.$order->table_number : ($order->delivery_address ? 'Giao hàng' : 'Mang về') }}<small class="d-block">{{ $order->delivery_address }}</small></td><td class="ui-numeric"><strong>{{ \App\Support\Money::format($order->total) }}đ</strong><small class="d-block">{{ $order->payment_method==='cash'?'COD':'Online · MB' }}</small><span class="small {{ $order->is_paid?'text-success':'text-muted' }}">{{ $order->paymentLabel() }}</span>@if($order->refund_required)<small class="d-block text-danger">Cần xử lý hoàn tiền</small>@endif</td><td><span class="badge badge-status">{{ $order->status->name }}</span></td><td class="app-order-actions-cell">@include('shared.order-actions')</td></tr>
+@empty<tr><td colspan="5" class="empty"><x-empty-state message="Không có đơn phù hợp." /></td></tr>@endforelse
+</tbody></table></div>{{ $records->links() }}
+@endsection

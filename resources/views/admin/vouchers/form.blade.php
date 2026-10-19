@@ -1,0 +1,5 @@
+@extends('layouts.app')
+@section('title','Lưu Voucher')
+@section('content')
+<form class="card card-body p-4 form-panel" method="post" action="{{ $record->exists ? route('admin.vouchers.update',$record) : route('admin.vouchers.store') }}">@csrf @if($record->exists)@method('PUT')@endif<h1 class="h3 mb-4">{{ $record->exists ? 'Cập nhật' : 'Thêm mới' }} Voucher</h1><x-field name="name" label="Tên voucher" type="text" :value="$record->name" required /><x-field name="discount_amount" label="Giá trị giảm (đ)" type="number" :value="\App\Support\Money::plain($record->discount_amount)" required min="0" step="1" /><x-field name="points_cost" label="Điểm đổi" type="number" :value="$record->points_cost" required min="0" step="1" /><x-field name="quantity" label="Số lượng còn" type="number" :value="$record->quantity" required min="0" step="1" /><x-field name="expires_at" label="Ngày hết hạn" type="datetime-local" :value="$record->expires_at?->format("Y-m-d\TH:i")" required /><div class="action-row"><button class="btn btn-primary">Lưu thông tin</button><a class="btn btn-outline-secondary" href="{{ route('admin.vouchers.index') }}">Quay lại</a></div></form>
+@endsection

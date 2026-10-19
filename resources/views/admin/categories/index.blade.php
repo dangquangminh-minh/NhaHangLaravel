@@ -1,0 +1,6 @@
+@extends('layouts.app')
+@section('title','Loại món')
+@section('content')
+<div class="d-flex flex-wrap justify-content-between gap-2 mb-4"><h1 class="h2">Quản lý Loại món</h1><a class="btn btn-primary" href="{{ route('admin.categories.create') }}">+ Thêm mới</a></div>
+@include('shared.search')<div class="table-responsive card mb-4"><table class="table mb-0"><thead><tr><th scope="col">Mã</th><th scope="col">Tên loại món</th><th scope="col">Mô tả</th><th scope="col">Thao tác</th></tr></thead><tbody class="ui-table-body">@forelse($records as $record)<tr><td>#{{ $record->id }}</td><td class="preserve-lines">{{ $record->name }}</td><td class="preserve-lines">{{ $record->description }}</td><td><div class="action-row"><a class="btn btn-sm btn-outline-primary" href="{{ route('admin.categories.show',$record) }}">Chi tiết</a><a class="btn btn-sm btn-outline-secondary" href="{{ route('admin.categories.edit',$record) }}">Sửa</a><x-delete :item="$record->name" :action="route('admin.categories.destroy',$record)" /></div></td></tr>@empty<tr><td colspan="4" class="empty"><x-empty-state message="Không có dữ liệu phù hợp." /></td></tr>@endforelse</tbody></table></div>{{ $records->links() }}
+@endsection

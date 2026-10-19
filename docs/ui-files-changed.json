@@ -1,0 +1,220 @@
+{
+  "backup": ".runtime/ui-stage-c-backup",
+  "modified": [
+    {
+      "file": "resources/views/admin/accounts/index.blade.php",
+      "before": "a1c60db5ab85521b91b8dae090719d526e7fbb14c800a794e2e6475dd32d267a",
+      "after": "b4addb98424fdddc57dc2de07bf1a004124923be70589c3e44684602f89ac746"
+    },
+    {
+      "file": "resources/views/admin/categories/index.blade.php",
+      "before": "a983f885e587e4540f76c836c9bcdc5105002909a3e1f452afe3e9bd8079182c",
+      "after": "41f32f3fc06e1d2afb7ab9c5c26a9b25a9229cbfba3544b4e2dcff97e137207e"
+    },
+    {
+      "file": "resources/views/admin/dashboard.blade.php",
+      "before": "e4434df7848a2ec90b01af63607fff60ca8589fd7b0beb56cabb20f6f3d75ea3",
+      "after": "f91ae02a4ea1d86249423e61f16318f98067192b02cb08e444158b5f24552935"
+    },
+    {
+      "file": "resources/views/admin/dishes/form.blade.php",
+      "before": "9506f0f92156f4e8f3703a70c4e0cfd6f597d51020b2aaa85fbcf74961a366c0",
+      "after": "0ba79c816ad29ac24c221db04d09b048653738e5a560df3835a6d346001dd3c9"
+    },
+    {
+      "file": "resources/views/admin/dishes/index.blade.php",
+      "before": "c06bf26b13dc17e942388968043e794c3117893cc8c182a252d83a4666ada644",
+      "after": "07e544c1dcec00c2e0130a003f0da610af171f0e8c80c0034bb14944f2fcf745"
+    },
+    {
+      "file": "resources/views/admin/dishes/show.blade.php",
+      "before": "f8aac62b4bb6e4428447dd806d3d23f2cbc58cfd38ff8a261468bf9b4489e78f",
+      "after": "9e2e5a75e3013ab58b6ada5860ed4ebf8390bda0ccf88a39b9b671492c9250ed"
+    },
+    {
+      "file": "resources/views/admin/orders/index.blade.php",
+      "before": "51bb2da1dcdc3fa267d8a5f425a13d0f54e6eee76d65d5ce45f6b22605837b45",
+      "after": "5480052e75c4f6535848768a52cffbbc7094ca98ee13621baaa9574ceaf36466"
+    },
+    {
+      "file": "resources/views/admin/suppliers/index.blade.php",
+      "before": "7a59ea247b525a38d7f3b1cac73380e1615d6338991ecd40f09d4ec6c00ef50e",
+      "after": "ac316e01c46d23243d8660c5365640745b0456d64ad598006c9437c1199b85f7"
+    },
+    {
+      "file": "resources/views/admin/vouchers/index.blade.php",
+      "before": "14644a48e8a8747dcd8d387bb48800cd5d646393964f4f61577c3104f0de08b3",
+      "after": "c514c3a529fe110d6fb719bcbd160345aa95fe4a1d214ed0a1a1cb32edc95930"
+    },
+    {
+      "file": "resources/views/auth/forgot.blade.php",
+      "before": "65c8557ae0b0b7f0e80f2e1de6c841a770571fa17090ccb2374cd11656396251",
+      "after": "cfca72ffeadd1a5f01d03054b3389655cd1526018f09ad517bd6b7a2357146e1"
+    },
+    {
+      "file": "resources/views/auth/login.blade.php",
+      "before": "08db1465d7e6ac2bef4813c71acd523a3d77b25f43f4c82e03843d2fbbf3d6f9",
+      "after": "fbeea4c3921ab2bf2ab7dbb29c1079e16fd132e405f0687fe0c67b40450e2d5a"
+    },
+    {
+      "file": "resources/views/auth/register.blade.php",
+      "before": "9b05a3eaf5c70e11a2e31bf4d68a1db935bea1be424789590c474f5d3970816f",
+      "after": "cf1cec2c7aaab07b56cf0d5d25f033dbe9cab56af63adc48c8501a616e3b04c4"
+    },
+    {
+      "file": "resources/views/auth/reset.blade.php",
+      "before": "307d038db94bb68fb33219cd88dfe2cec0ba7e40cdf5c7637adc2d17b65626c1",
+      "after": "98cdcd852c70c8510c49b80afff6bad3860bd30e3470c87e31e43a4de6736b99"
+    },
+    {
+      "file": "resources/views/cart/index.blade.php",
+      "before": "bc5ecc0337bc602675dbc1abf19fcdc9f8049c95fa1d1de15c4cfbe1608add8d",
+      "after": "e95c81ed9054aeac8354e127378419901f197805f96a2bb5f85cdd499d823aef"
+    },
+    {
+      "file": "resources/views/components/delete.blade.php",
+      "before": "bc2388efa61a9a3d1cbe24ade289e75f7b7594c6f0289c7ff4102960efbbe157",
+      "after": "bdfd96ea4666c4718cb050cbda89edcabcab272223a8b60b96f81a9f3341ed3c"
+    },
+    {
+      "file": "resources/views/components/field.blade.php",
+      "before": "1f8c782488a40a6316a18a79742a5cda381e1f022e97f6f8847df0d57561d632",
+      "after": "d0e81715d2e6b45f6e7f2ee88473282d887b492a118d37ce4f272ff69432581c"
+    },
+    {
+      "file": "resources/views/components/gmail-email.blade.php",
+      "before": "508b09adb5d4954b8626f5a84c98e22e8873c9db559498418b908c361d046831",
+      "after": "1238a0f9202c1906a3ee2a0a031139558d75659ee9c4fa5c2a0c0f5ed4239071"
+    },
+    {
+      "file": "resources/views/components/sales-chart.blade.php",
+      "before": "225d55317b73e52d5f37c88d1d075afa2277c4d8a5a5cd32116bbe81e9c8377d",
+      "after": "bf976653d5e5f25224f22989778d8b7a6af3718128480958172b755f9925b192"
+    },
+    {
+      "file": "resources/views/layouts/app.blade.php",
+      "before": "ab0762e1c8a7ccd418aafdf781f7b207f37b50672fcd5796e41c136b031827b2",
+      "after": "d3e97828a7bcaee20013e0d1f4774c5546a3ba7528beb95277b56c7a5f9167cd"
+    },
+    {
+      "file": "resources/views/menu/home.blade.php",
+      "before": "479c00d6569d3e0384d256857243430d6e3ccb86ba55ae48fccfcbc3586305e5",
+      "after": "aa4d322401d761303187c8af3be8235f30ba23e3a6713ef35456dba17f6a8520"
+    },
+    {
+      "file": "resources/views/menu/results.blade.php",
+      "before": "2672d879afd2f408b3561c5a51b15c369f56f0fae8d46d3bfffdf540be183e0c",
+      "after": "43dc15166bee3fe63ef329be94a3236bed64d5246c700165b12807ecb54c65a9"
+    },
+    {
+      "file": "resources/views/menu/show.blade.php",
+      "before": "94e2f9646a9c0d03b7bdf520f8b0c3e5911121b5f77c7710aafd65f98b39eb38",
+      "after": "05979b804780d65a1fb23395a1188ad61188632c90336b43f63b5ac9ce12e321"
+    },
+    {
+      "file": "resources/views/orders/index.blade.php",
+      "before": "64dcdaa1e710fda664aa928b352fe95d5e0c0110f78f86aa8a159590c2f8e29e",
+      "after": "e2aac7ed0b1cece16fa3bab1b613d2eb26330dc7036850a4935d0ceb3cf41fbe"
+    },
+    {
+      "file": "resources/views/orders/show.blade.php",
+      "before": "c4ccfa6cb12ace286686358ff46a9d6e5f56828c71b77295a1346c585adcc99c",
+      "after": "20bb1a760ef9ffeddd0ef3b50e3fe4224b419c1faaa7ba707fc985d83afe79ca"
+    },
+    {
+      "file": "resources/views/profile/edit.blade.php",
+      "before": "308c1105a8c2fcbc43d83c8ea4902a4bfeb32e0d367ae3ad9c18661f2d18cfd5",
+      "after": "1e4408a6f5bb9cafd417daba371bcbc31393072af5b56c6ad8236681a5d56817"
+    },
+    {
+      "file": "resources/views/reservations/create.blade.php",
+      "before": "60e4aa53ddaef0032914a8eafdb570e3ed22301d2c82654031b3534b0f6a3141",
+      "after": "c7f4f44c3940e4d36ace9719b86e25f5b958d7cd88afd369ff007a5cda9d4ad2"
+    },
+    {
+      "file": "resources/views/reservations/index.blade.php",
+      "before": "f548062e8e69e14c74c3d1fe3d149168018934ae62075a234a00ac81234138bc",
+      "after": "564c3996a5eaed93b1e6d5f3418ad273f3bbbcfd2e7891d6c52554ad8c44a353"
+    },
+    {
+      "file": "resources/views/reviews/index.blade.php",
+      "before": "bf6fb471c0e9bd81aaa683e37b0b106553d0202f2822743fbe03d55bea58ce5e",
+      "after": "0a8423177cfde91d8415d1b5a29598fe9e4b5bfc577e16b0ec63a1035c4f207a"
+    },
+    {
+      "file": "resources/views/shared/dish-card.blade.php",
+      "before": "5945025aafb60cb468c8a4722f3916144a8a6cbc19bcd62c58237b507496ecba",
+      "after": "c0e43cbfdfb0f981ded8b85e46661c8772a296bf6bfb90c7ae22047963d61ad9"
+    },
+    {
+      "file": "public/assets/app.css",
+      "before": "609ea5f9ca342b6966fb4a14e5b2a2247c81023b811ecd279f40e730557d938f",
+      "after": "474ce4c487d3361310209257cae7c4c5f1be335cadbcb63a711c45d1f819a428"
+    },
+    {
+      "file": "public/assets/app.js",
+      "before": "9538d3fb9133ada0b772562caa51412f39ab0387b3ea30e408e6b8b936434675",
+      "after": "20641f95fb619dae9fcdfa154559e1506ba44bfd88e6503d0f5e0a07a56387ee"
+    },
+    {
+      "file": "public/assets/ui-components.css",
+      "before": "e2d1fe9e4d78b1f8c7df605629b7d76cf2093d613f09a80ec22d59d7b66f8458",
+      "after": "566730b56e0a30245afdd48a223848ed84bd22e5ec088f69b4eae2f6ac7e84ca"
+    },
+    {
+      "file": "public/assets/ui-tokens.css",
+      "before": "d2f4f2be06af4abe2ee26103f68cc4b6d58a80dc36d69d6ef932ff6ee366b3d9",
+      "after": "0238bb56c3d639d9d96a55fcad226ba17d4d59b23a6c8bac33c2d53d4f5abaed"
+    }
+  ],
+  "added": [
+    {
+      "file": "resources/views/shared/management-nav.blade.php",
+      "after": "b1b21bdb920a240335520d78e91eb534b888aaa52bf6e73a30ab6003e1f97c08"
+    },
+    {
+      "file": "resources/views/shared/ui-icons.blade.php",
+      "after": "2bb81615233b80faa7d2131f42e9684e3fe33a787b7c64ae1b910403aaf49b41"
+    },
+    {
+      "file": "resources/views/shared/confirm-modal.blade.php",
+      "after": "8c333c31448e8468f29f27b3939bcec71205a3cbc644b062973a0b6f3ff86812"
+    },
+    {
+      "file": "resources/views/components/empty-state.blade.php",
+      "after": "e190b13f32a7e138245cf0df34c80215327893ff272e4f8b8d3254b54cf0a4ac"
+    },
+    {
+      "file": "public/assets/app-ui.js",
+      "after": "6879dde73b4521c969b8453bfc66bc6eb0bcde0a85fdd628e8eedbf79a9dfb97"
+    },
+    {
+      "file": "tests/Feature/UiPresentationTest.php",
+      "after": "d9500f1c9227ffcaf1c0dde352d72bcc8bf6e7c6c06e2bab2766f4cd9a41b51a"
+    }
+  ],
+  "protectedFilesChecked": 84,
+  "protectedFilesChanged": [],
+  "productionCustomAssets": [
+    {
+      "file": "public/assets/ui-tokens.css",
+      "bytes": 2300
+    },
+    {
+      "file": "public/assets/ui-components.css",
+      "bytes": 25856
+    },
+    {
+      "file": "public/assets/app.css",
+      "bytes": 19217
+    },
+    {
+      "file": "public/assets/app-ui.js",
+      "bytes": 9605
+    },
+    {
+      "file": "public/assets/app.js",
+      "bytes": 7590
+    }
+  ]
+}

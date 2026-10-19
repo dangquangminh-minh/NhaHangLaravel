@@ -1,0 +1,182 @@
+erDiagram
+    dining_tables o|--o{ reservations : table_number
+    dining_tables o|--o{ orders : table_number
+    users o|--o{ orders : payment_verified_by
+    roles ||--o{ users : role_id
+    categories ||--o{ dishes : category_id
+    suppliers ||--o{ dishes : supplier_id
+    dishes ||--o{ dish_images : dish_id
+    users ||--o{ orders : user_id
+    users o|--o{ orders : handled_by
+    order_statuses ||--o{ orders : order_status_id
+    orders ||--o{ order_items : order_id
+    dishes ||--o{ order_items : dish_id
+    users ||--o{ addresses : user_id
+    users o|--o{ reservations : user_id
+    vouchers ||--o{ voucher_redemptions : voucher_id
+    users ||--o{ voucher_redemptions : user_id
+    voucher_redemptions o|--o| orders : voucher_redemption_id
+    dishes ||--o{ reviews : dish_id
+    users ||--o{ reviews : user_id
+    dining_tables {
+        smallint number PK
+    }
+    roles {
+        bigint id PK
+        varchar code UK
+        varchar name
+    }
+    users {
+        bigint id PK
+        bigint role_id FK
+        varchar name
+        varchar email UK
+        timestamp email_verified_at
+        varchar password
+        varchar phone
+        varchar gender
+        smallint birth_year
+        varchar avatar
+        varchar remember_token
+        timestamp created_at
+        timestamp updated_at
+    }
+    categories {
+        bigint id PK
+        varchar name UK
+        varchar description
+        timestamp created_at
+        timestamp updated_at
+    }
+    suppliers {
+        bigint id PK
+        varchar name UK
+        varchar address
+        varchar phone
+        timestamp created_at
+        timestamp updated_at
+    }
+    dishes {
+        bigint id PK
+        bigint category_id FK
+        bigint supplier_id FK
+        varchar name UK
+        decimal price
+        text description
+        varchar image
+        boolean is_available
+        timestamp created_at
+        timestamp updated_at
+    }
+    dish_images {
+        bigint id PK
+        bigint dish_id FK
+        varchar path
+        timestamp created_at
+        timestamp updated_at
+    }
+    order_statuses {
+        bigint id PK
+        varchar name UK
+    }
+    orders {
+        bigint id PK
+        bigint user_id FK
+        bigint handled_by FK
+        bigint order_status_id FK
+        bigint voucher_redemption_id FK,UK
+        char checkout_token UK
+        decimal subtotal
+        decimal discount
+        decimal total
+        timestamp payment_reported_at
+        timestamp payment_verified_at
+        bigint payment_verified_by FK
+        boolean refund_required
+        boolean is_paid
+        enum payment_method
+        smallint table_number FK
+        varchar delivery_address
+        varchar recipient_name
+        varchar recipient_phone
+        varchar note
+        timestamp created_at
+        timestamp updated_at
+    }
+    order_items {
+        bigint id PK
+        bigint order_id FK "UNIQUE(order_id,dish_id)"
+        bigint dish_id FK
+        varchar dish_name
+        smallint quantity
+        decimal unit_price
+        timestamp created_at
+        timestamp updated_at
+    }
+    vouchers {
+        bigint id PK
+        varchar name UK
+        decimal discount_amount
+        int points_cost
+        int quantity
+        datetime expires_at
+        timestamp created_at
+        timestamp updated_at
+    }
+    voucher_redemptions {
+        bigint id PK
+        bigint user_id FK
+        bigint voucher_id FK
+        varchar code UK
+        int points_spent
+        decimal discount_amount
+        datetime expires_at
+        datetime used_at
+        timestamp created_at
+        timestamp updated_at
+    }
+    addresses {
+        bigint id PK
+        bigint user_id FK
+        varchar recipient_name
+        varchar phone
+        varchar address
+        boolean is_default
+        timestamp created_at
+        timestamp updated_at
+    }
+    reservations {
+        bigint id PK
+        smallint table_number FK
+        bigint user_id FK
+        varchar name
+        varchar email
+        varchar phone
+        datetime reserved_at
+        smallint guests
+        varchar note
+        enum status
+        timestamp created_at
+        timestamp updated_at
+    }
+    contacts {
+        bigint id PK
+        varchar name
+        varchar email
+        varchar phone
+        varchar subject
+        text message
+        boolean is_read
+        timestamp created_at
+        timestamp updated_at
+    }
+    reviews {
+        bigint id PK
+        bigint dish_id FK "UNIQUE(dish_id,user_id)"
+        bigint user_id FK
+        tinyint rating
+        text message
+        varchar image
+        timestamp created_at
+        timestamp updated_at
+    }

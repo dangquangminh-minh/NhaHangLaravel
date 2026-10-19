@@ -1,0 +1,46 @@
+[
+    {
+        "Path":  "/",
+        "Status":  200
+    },
+    {
+        "Path":  "/dang-nhap",
+        "Status":  200
+    },
+    {
+        "Path":  "/thuc-don?q=C%C6%A1m",
+        "Status":  200
+    },
+    {
+        "Path":  "/assets/bootstrap.min.css",
+        "Status":  200
+    },
+    {
+        "Path":  "/assets/app.css",
+        "Status":  200
+    },
+    {
+        "Path":  "/assets/bootstrap.bundle.min.js",
+        "Status":  200
+    },
+    {
+        "Path":  "/assets/images/hero.png",
+        "Status":  200
+    },
+    {
+        "Path":  "Admin login -\u003e /admin",
+        "Status":  200
+    },
+    {
+        "Path":  "User login -\u003e /thuc-don",
+        "Status":  200
+    },
+    {
+        "Path":  "User /admin/categories",
+        "Status":  403
+    },
+    {
+        "Path":  "User /don-hang/13",
+        "Status":  403
+    }
+]

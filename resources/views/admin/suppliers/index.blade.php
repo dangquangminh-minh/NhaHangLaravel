@@ -1,0 +1,6 @@
+@extends('layouts.app')
+@section('title','Nhà cung cấp')
+@section('content')
+<div class="d-flex flex-wrap justify-content-between gap-2 mb-4"><h1 class="h2">Quản lý Nhà cung cấp</h1><a class="btn btn-primary" href="{{ route('admin.suppliers.create') }}">+ Thêm mới</a></div>
+@include('shared.search')<div class="table-responsive card mb-4"><table class="table mb-0"><thead><tr><th scope="col">Mã</th><th scope="col">Tên nhà cung cấp</th><th scope="col">Địa chỉ</th><th scope="col">Số điện thoại</th><th scope="col">Thao tác</th></tr></thead><tbody class="ui-table-body">@forelse($records as $record)<tr><td>#{{ $record->id }}</td><td class="preserve-lines">{{ $record->name }}</td><td class="preserve-lines">{{ $record->address }}</td><td class="preserve-lines">{{ $record->phone }}</td><td><div class="action-row"><a class="btn btn-sm btn-outline-primary" href="{{ route('admin.suppliers.show',$record) }}">Chi tiết</a><a class="btn btn-sm btn-outline-secondary" href="{{ route('admin.suppliers.edit',$record) }}">Sửa</a><x-delete :item="$record->name" :action="route('admin.suppliers.destroy',$record)" /></div></td></tr>@empty<tr><td colspan="5" class="empty"><x-empty-state message="Không có dữ liệu phù hợp." /></td></tr>@endforelse</tbody></table></div>{{ $records->links() }}
+@endsection

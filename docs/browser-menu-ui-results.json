@@ -1,0 +1,71 @@
+{
+  "date": "2026-10-18",
+  "database": "nhahang_browser_feature_test",
+  "checks": [
+    {
+      "name": "category changes without document reload",
+      "passed": true
+    },
+    {
+      "name": "typing immediately filters matching dishes without reload",
+      "passed": true
+    },
+    {
+      "name": "live search empty state and unchanged search focus",
+      "passed": true
+    },
+    {
+      "name": "newest query wins when typing quickly",
+      "passed": true
+    },
+    {
+      "name": "pagination updates without document reload",
+      "passed": true
+    },
+    {
+      "name": "desktop cart is beside menu",
+      "passed": true
+    },
+    {
+      "name": "mobile cart remains visible beside collapsed menu button",
+      "passed": true
+    },
+    {
+      "name": "directly entering 49 recalculates quantity and checkout total",
+      "passed": true
+    },
+    {
+      "name": "plus still works after direct entry",
+      "passed": true
+    },
+    {
+      "name": "minus still works after direct entry",
+      "passed": true
+    },
+    {
+      "name": "cancel zero quantity keeps one",
+      "passed": true
+    },
+    {
+      "name": "confirm zero quantity removes dish",
+      "passed": true
+    },
+    {
+      "name": "online checkout shows QR before personal order details",
+      "passed": true
+    },
+    {
+      "name": "reporting transfer reveals details and still awaits employee verification",
+      "passed": true
+    },
+    {
+      "name": "admin dish search also updates without reload",
+      "passed": true
+    },
+    {
+      "name": "no JavaScript exceptions",
+      "passed": true
+    }
+  ],
+  "javascriptErrors": []
+}

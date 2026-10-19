@@ -1,0 +1,83 @@
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+skinparam shadowing false
+actor "Người truy cập" as Visitor
+actor "Khách hàng\n(User)" as Customer
+actor "Admin / Nhân viên" as Admin
+actor "Chủ nhà hàng" as Owner
+actor "Thu ngân" as Cashier
+Customer --|> Visitor
+Admin --|> Visitor
+Owner --|> Admin
+Cashier --|> Admin
+rectangle "Hệ thống Nhà Hàng Ngon — Laravel" {
+  usecase "Xem / tìm / lọc thực đơn\nvà chi tiết món" as Menu
+  usecase "Đăng ký tài khoản User" as Register
+  usecase "Đăng nhập / quên mật khẩu" as Login
+  usecase "Đăng xuất / sửa hồ sơ" as Profile
+  usecase "Gửi yêu cầu đặt bàn" as Booking
+  usecase "Gửi liên hệ" as Contact
+  usecase "Quản lý giỏ hàng" as Cart
+  usecase "Đặt món" as Checkout
+  usecase "Tính tiền bằng giá CSDL" as Price
+  usecase "Lưu hóa đơn và chi tiết" as SaveOrder
+  usecase "Áp dụng voucher sở hữu" as Apply
+  usecase "Xem / hủy đơn của mình" as History
+  usecase "Quản lý địa chỉ của mình" as Address
+  usecase "Đổi điểm lấy voucher" as Exchange
+  usecase "Kiểm tra điểm / tồn / hạn" as CheckPoints
+  usecase "Viết / sửa / xóa\nđánh giá của mình" as Review
+  usecase "Theo dõi / hủy\nđặt bàn của mình" as MyBooking
+  usecase "CRUD loại món / món ăn /\nnhà cung cấp và ảnh" as Catalog
+  usecase "Duyệt đơn / xác nhận thanh toán" as Approve
+  usecase "Xem thống kê" as Statistics
+  usecase "Xử lý đặt bàn / liên hệ" as Support
+  usecase "Xóa đánh giá" as Moderate
+  usecase "CRUD nhân viên" as Accounts
+  usecase "Thêm / xóa khách hàng" as Customers
+  usecase "Báo đã chuyển khoản" as ReportPayment
+  usecase "Xác minh tiền đã nhận" as VerifyPayment
+  usecase "CRUD voucher" as Offers
+}
+Visitor -- Menu
+Visitor -- Register
+Visitor -- Login
+Visitor -- Booking
+Visitor -- Contact
+Customer -- Profile
+Admin -- Profile
+Customer -- Cart
+Customer -- Checkout
+Customer -- History
+Customer -- Address
+Customer -- Exchange
+Customer -- Review
+Customer -- MyBooking
+Admin -- Catalog
+Admin -- Approve
+Owner -- Statistics
+Cashier -- Statistics
+Admin -- Support
+Admin -- Moderate
+Owner -- Accounts
+Admin -- Customers
+Customer -- ReportPayment
+Admin -- VerifyPayment
+Owner -- Offers
+Checkout ..> Price : <<include>>
+Checkout ..> SaveOrder : <<include>>
+Apply ..> Checkout : <<extend>>\n[khách nhập mã voucher]
+Exchange ..> CheckPoints : <<include>>
+note bottom of Checkout
+  Tiền điều kiện: đã đăng nhập User.
+  Hình thức tiền mặt / chuyển khoản là lựa chọn.
+  Online dựng QR cục bộ. Khách báo chuyển khoản;
+  nhân viên xác minh tiền, đơn vẫn chờ xác nhận.
+  Không có actor ngân hàng tích hợp.
+end note
+note bottom of Accounts
+  Chỉ Chủ nhà hàng được truy cập.
+  Admin không kế thừa quyền của Chủ.
+end note
+@enduml

@@ -1,0 +1,15 @@
+digraph G {
+graph [fontname="Times New Roman",fontsize=15,bgcolor="white",pad="0.18",nodesep="0.28",ranksep="0.35",dpi=220];
+node [fontname="Times New Roman",fontsize=14,shape=box,style="rounded,filled",fillcolor="#f3f6f3",color="#476354",margin="0.12,0.08"];
+edge [fontname="Times New Roman",fontsize=12,color="#476354"];
+rankdir=TB;
+a [label="Trình duyệt\nHTTP request"];
+b [label="Route + Middleware\nauth / role / can / CSRF"];
+c [label="Form Request\nKiểm tra dữ liệu"];
+d [label="Controller\nĐiều phối xử lý"];
+e [label="Service + Eloquent\nNghiệp vụ / quan hệ"];
+f [label="MySQL\nRàng buộc / transaction"];
+g [label="Blade / Redirect\nHTML + thông báo"];
+a->b->c->d;d->e->f;d->g;g->a [label="Response",constraint=false];
+{rank=same;e;g;}
+}

@@ -1,0 +1,6 @@
+{
+  "decoded": true,
+  "payload_matches": true,
+  "bank_account_matches": true,
+  "amount_matches": true
+}

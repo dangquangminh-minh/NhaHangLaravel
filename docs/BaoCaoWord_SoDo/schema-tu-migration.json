@@ -1,0 +1,1098 @@
+{
+  "tables": {
+    "roles": [
+      {
+        "name": "id",
+        "type": "BIGINT UNSIGNED",
+        "null": "Không",
+        "constraints": "PK; AUTO_INCREMENT"
+      },
+      {
+        "name": "code",
+        "type": "VARCHAR(20)",
+        "null": "Không",
+        "constraints": "UNIQUE"
+      },
+      {
+        "name": "name",
+        "type": "VARCHAR(50)",
+        "null": "Không",
+        "constraints": "—"
+      }
+    ],
+    "users": [
+      {
+        "name": "id",
+        "type": "BIGINT UNSIGNED",
+        "null": "Không",
+        "constraints": "PK; AUTO_INCREMENT"
+      },
+      {
+        "name": "role_id",
+        "type": "BIGINT UNSIGNED",
+        "null": "Không",
+        "constraints": "DEFAULT 1; FK roles.id; ON DELETE RESTRICT"
+      },
+      {
+        "name": "name",
+        "type": "VARCHAR(100)",
+        "null": "Không",
+        "constraints": "—"
+      },
+      {
+        "name": "email",
+        "type": "VARCHAR(100)",
+        "null": "Không",
+        "constraints": "UNIQUE"
+      },
+      {
+        "name": "email_verified_at",
+        "type": "TIMESTAMP",
+        "null": "Có",
+        "constraints": "—"
+      },
+      {
+        "name": "password",
+        "type": "VARCHAR(255)",
+        "null": "Không",
+        "constraints": "—"
+      },
+      {
+        "name": "phone",
+        "type": "VARCHAR(20)",
+        "null": "Có",
+        "constraints": "—"
+      },
+      {
+        "name": "gender",
+        "type": "VARCHAR(10)",
+        "null": "Có",
+        "constraints": "—"
+      },
+      {
+        "name": "birth_year",
+        "type": "SMALLINT UNSIGNED",
+        "null": "Có",
+        "constraints": "—"
+      },
+      {
+        "name": "avatar",
+        "type": "VARCHAR(255)",
+        "null": "Có",
+        "constraints": "—"
+      },
+      {
+        "name": "remember_token",
+        "type": "VARCHAR(100)",
+        "null": "Có",
+        "constraints": "Trường hỗ trợ Auth; không công bố giá trị"
+      },
+      {
+        "name": "created_at",
+        "type": "TIMESTAMP",
+        "null": "Có",
+        "constraints": "Eloquent quản lý"
+      },
+      {
+        "name": "updated_at",
+        "type": "TIMESTAMP",
+        "null": "Có",
+        "constraints": "Eloquent quản lý"
+      }
+    ],
+    "password_reset_tokens": [
+      {
+        "name": "email",
+        "type": "VARCHAR(255)",
+        "null": "Không",
+        "constraints": "PK"
+      },
+      {
+        "name": "token",
+        "type": "VARCHAR(255)",
+        "null": "Không",
+        "constraints": "—"
+      },
+      {
+        "name": "created_at",
+        "type": "TIMESTAMP",
+        "null": "Có",
+        "constraints": "—"
+      }
+    ],
+    "sessions": [
+      {
+        "name": "id",
+        "type": "VARCHAR(255)",
+        "null": "Không",
+        "constraints": "PK"
+      },
+      {
+        "name": "user_id",
+        "type": "BIGINT UNSIGNED",
+        "null": "Có",
+        "constraints": "INDEX"
+      },
+      {
+        "name": "ip_address",
+        "type": "VARCHAR(45)",
+        "null": "Có",
+        "constraints": "—"
+      },
+      {
+        "name": "user_agent",
+        "type": "TEXT",
+        "null": "Có",
+        "constraints": "—"
+      },
+      {
+        "name": "payload",
+        "type": "LONGTEXT",
+        "null": "Không",
+        "constraints": "—"
+      },
+      {
+        "name": "last_activity",
+        "type": "INT",
+        "null": "Không",
+        "constraints": "INDEX"
+      }
+    ],
+    "cache": [
+      {
+        "name": "key",
+        "type": "VARCHAR(255)",
+        "null": "Không",
+        "constraints": "PK"
+      },
+      {
+        "name": "value",
+        "type": "MEDIUMTEXT",
+        "null": "Không",
+        "constraints": "—"
+      },
+      {
+        "name": "expiration",
+        "type": "BIGINT",
+        "null": "Không",
+        "constraints": "INDEX"
+      }
+    ],
+    "cache_locks": [
+      {
+        "name": "key",
+        "type": "VARCHAR(255)",
+        "null": "Không",
+        "constraints": "PK"
+      },
+      {
+        "name": "owner",
+        "type": "VARCHAR(255)",
+        "null": "Không",
+        "constraints": "—"
+      },
+      {
+        "name": "expiration",
+        "type": "BIGINT",
+        "null": "Không",
+        "constraints": "INDEX"
+      }
+    ],
+    "jobs": [
+      {
+        "name": "id",
+        "type": "BIGINT UNSIGNED",
+        "null": "Không",
+        "constraints": "PK; AUTO_INCREMENT"
+      },
+      {
+        "name": "queue",
+        "type": "VARCHAR(255)",
+        "null": "Không",
+        "constraints": "INDEX"
+      },
+      {
+        "name": "payload",
+        "type": "LONGTEXT",
+        "null": "Không",
+        "constraints": "—"
+      },
+      {
+        "name": "attempts",
+        "type": "SMALLINT UNSIGNED",
+        "null": "Không",
+        "constraints": "—"
+      },
+      {
+        "name": "reserved_at",
+        "type": "INT UNSIGNED",
+        "null": "Có",
+        "constraints": "—"
+      },
+      {
+        "name": "available_at",
+        "type": "INT UNSIGNED",
+        "null": "Không",
+        "constraints": "—"
+      },
+      {
+        "name": "created_at",
+        "type": "INT UNSIGNED",
+        "null": "Không",
+        "constraints": "—"
+      }
+    ],
+    "job_batches": [
+      {
+        "name": "id",
+        "type": "VARCHAR(255)",
+        "null": "Không",
+        "constraints": "PK"
+      },
+      {
+        "name": "name",
+        "type": "VARCHAR(255)",
+        "null": "Không",
+        "constraints": "—"
+      },
+      {
+        "name": "total_jobs",
+        "type": "INT",
+        "null": "Không",
+        "constraints": "—"
+      },
+      {
+        "name": "pending_jobs",
+        "type": "INT",
+        "null": "Không",
+        "constraints": "—"
+      },
+      {
+        "name": "failed_jobs",
+        "type": "INT",
+        "null": "Không",
+        "constraints": "—"
+      },
+      {
+        "name": "failed_job_ids",
+        "type": "LONGTEXT",
+        "null": "Không",
+        "constraints": "—"
+      },
+      {
+        "name": "options",
+        "type": "MEDIUMTEXT",
+        "null": "Có",
+        "constraints": "—"
+      },
+      {
+        "name": "cancelled_at",
+        "type": "INT",
+        "null": "Có",
+        "constraints": "—"
+      },
+      {
+        "name": "created_at",
+        "type": "INT",
+        "null": "Không",
+        "constraints": "—"
+      },
+      {
+        "name": "finished_at",
+        "type": "INT",
+        "null": "Có",
+        "constraints": "—"
+      }
+    ],
+    "failed_jobs": [
+      {
+        "name": "id",
+        "type": "BIGINT UNSIGNED",
+        "null": "Không",
+        "constraints": "PK; AUTO_INCREMENT"
+      },
+      {
+        "name": "uuid",
+        "type": "VARCHAR(255)",
+        "null": "Không",
+        "constraints": "UNIQUE"
+      },
+      {
+        "name": "connection",
+        "type": "VARCHAR(255)",
+        "null": "Không",
+        "constraints": "—"
+      },
+      {
+        "name": "queue",
+        "type": "VARCHAR(255)",
+        "null": "Không",
+        "constraints": "—"
+      },
+      {
+        "name": "payload",
+        "type": "LONGTEXT",
+        "null": "Không",
+        "constraints": "—"
+      },
+      {
+        "name": "exception",
+        "type": "LONGTEXT",
+        "null": "Không",
+        "constraints": "—"
+      },
+      {
+        "name": "failed_at",
+        "type": "TIMESTAMP",
+        "null": "Không",
+        "constraints": "DEFAULT CURRENT_TIMESTAMP"
+      }
+    ],
+    "categories": [
+      {
+        "name": "id",
+        "type": "BIGINT UNSIGNED",
+        "null": "Không",
+        "constraints": "PK; AUTO_INCREMENT"
+      },
+      {
+        "name": "name",
+        "type": "VARCHAR(100)",
+        "null": "Không",
+        "constraints": "UNIQUE"
+      },
+      {
+        "name": "description",
+        "type": "VARCHAR(255)",
+        "null": "Có",
+        "constraints": "—"
+      },
+      {
+        "name": "created_at",
+        "type": "TIMESTAMP",
+        "null": "Có",
+        "constraints": "Eloquent quản lý"
+      },
+      {
+        "name": "updated_at",
+        "type": "TIMESTAMP",
+        "null": "Có",
+        "constraints": "Eloquent quản lý"
+      }
+    ],
+    "suppliers": [
+      {
+        "name": "id",
+        "type": "BIGINT UNSIGNED",
+        "null": "Không",
+        "constraints": "PK; AUTO_INCREMENT"
+      },
+      {
+        "name": "name",
+        "type": "VARCHAR(100)",
+        "null": "Không",
+        "constraints": "UNIQUE"
+      },
+      {
+        "name": "address",
+        "type": "VARCHAR(255)",
+        "null": "Không",
+        "constraints": "—"
+      },
+      {
+        "name": "phone",
+        "type": "VARCHAR(20)",
+        "null": "Không",
+        "constraints": "—"
+      },
+      {
+        "name": "created_at",
+        "type": "TIMESTAMP",
+        "null": "Có",
+        "constraints": "Eloquent quản lý"
+      },
+      {
+        "name": "updated_at",
+        "type": "TIMESTAMP",
+        "null": "Có",
+        "constraints": "Eloquent quản lý"
+      }
+    ],
+    "dishes": [
+      {
+        "name": "id",
+        "type": "BIGINT UNSIGNED",
+        "null": "Không",
+        "constraints": "PK; AUTO_INCREMENT"
+      },
+      {
+        "name": "category_id",
+        "type": "BIGINT UNSIGNED",
+        "null": "Không",
+        "constraints": "FK categories.id; ON DELETE RESTRICT"
+      },
+      {
+        "name": "supplier_id",
+        "type": "BIGINT UNSIGNED",
+        "null": "Không",
+        "constraints": "FK suppliers.id; ON DELETE RESTRICT"
+      },
+      {
+        "name": "name",
+        "type": "VARCHAR(200)",
+        "null": "Không",
+        "constraints": "UNIQUE"
+      },
+      {
+        "name": "price",
+        "type": "DECIMAL(18,2)",
+        "null": "Không",
+        "constraints": "—"
+      },
+      {
+        "name": "description",
+        "type": "TEXT",
+        "null": "Có",
+        "constraints": "—"
+      },
+      {
+        "name": "image",
+        "type": "VARCHAR(255)",
+        "null": "Có",
+        "constraints": "—"
+      },
+      {
+        "name": "is_available",
+        "type": "TINYINT(1)",
+        "null": "Không",
+        "constraints": "DEFAULT true"
+      },
+      {
+        "name": "created_at",
+        "type": "TIMESTAMP",
+        "null": "Có",
+        "constraints": "Eloquent quản lý"
+      },
+      {
+        "name": "updated_at",
+        "type": "TIMESTAMP",
+        "null": "Có",
+        "constraints": "Eloquent quản lý"
+      }
+    ],
+    "dish_images": [
+      {
+        "name": "id",
+        "type": "BIGINT UNSIGNED",
+        "null": "Không",
+        "constraints": "PK; AUTO_INCREMENT"
+      },
+      {
+        "name": "dish_id",
+        "type": "BIGINT UNSIGNED",
+        "null": "Không",
+        "constraints": "FK dishes.id; ON DELETE CASCADE"
+      },
+      {
+        "name": "path",
+        "type": "VARCHAR(255)",
+        "null": "Không",
+        "constraints": "—"
+      },
+      {
+        "name": "created_at",
+        "type": "TIMESTAMP",
+        "null": "Có",
+        "constraints": "Eloquent quản lý"
+      },
+      {
+        "name": "updated_at",
+        "type": "TIMESTAMP",
+        "null": "Có",
+        "constraints": "Eloquent quản lý"
+      }
+    ],
+    "order_statuses": [
+      {
+        "name": "id",
+        "type": "BIGINT UNSIGNED",
+        "null": "Không",
+        "constraints": "PK; AUTO_INCREMENT"
+      },
+      {
+        "name": "name",
+        "type": "VARCHAR(50)",
+        "null": "Không",
+        "constraints": "UNIQUE"
+      }
+    ],
+    "vouchers": [
+      {
+        "name": "id",
+        "type": "BIGINT UNSIGNED",
+        "null": "Không",
+        "constraints": "PK; AUTO_INCREMENT"
+      },
+      {
+        "name": "name",
+        "type": "VARCHAR(100)",
+        "null": "Không",
+        "constraints": "UNIQUE"
+      },
+      {
+        "name": "discount_amount",
+        "type": "DECIMAL(18,2)",
+        "null": "Không",
+        "constraints": "—"
+      },
+      {
+        "name": "points_cost",
+        "type": "INT UNSIGNED",
+        "null": "Không",
+        "constraints": "—"
+      },
+      {
+        "name": "quantity",
+        "type": "INT UNSIGNED",
+        "null": "Không",
+        "constraints": "—"
+      },
+      {
+        "name": "expires_at",
+        "type": "DATETIME",
+        "null": "Không",
+        "constraints": "—"
+      },
+      {
+        "name": "created_at",
+        "type": "TIMESTAMP",
+        "null": "Có",
+        "constraints": "Eloquent quản lý"
+      },
+      {
+        "name": "updated_at",
+        "type": "TIMESTAMP",
+        "null": "Có",
+        "constraints": "Eloquent quản lý"
+      }
+    ],
+    "voucher_redemptions": [
+      {
+        "name": "id",
+        "type": "BIGINT UNSIGNED",
+        "null": "Không",
+        "constraints": "PK; AUTO_INCREMENT"
+      },
+      {
+        "name": "user_id",
+        "type": "BIGINT UNSIGNED",
+        "null": "Không",
+        "constraints": "FK users.id; ON DELETE RESTRICT"
+      },
+      {
+        "name": "voucher_id",
+        "type": "BIGINT UNSIGNED",
+        "null": "Không",
+        "constraints": "FK vouchers.id; ON DELETE RESTRICT"
+      },
+      {
+        "name": "code",
+        "type": "VARCHAR(32)",
+        "null": "Không",
+        "constraints": "UNIQUE"
+      },
+      {
+        "name": "points_spent",
+        "type": "INT UNSIGNED",
+        "null": "Không",
+        "constraints": "—"
+      },
+      {
+        "name": "discount_amount",
+        "type": "DECIMAL(18,2)",
+        "null": "Không",
+        "constraints": "—"
+      },
+      {
+        "name": "expires_at",
+        "type": "DATETIME",
+        "null": "Không",
+        "constraints": "—"
+      },
+      {
+        "name": "used_at",
+        "type": "DATETIME",
+        "null": "Có",
+        "constraints": "—"
+      },
+      {
+        "name": "created_at",
+        "type": "TIMESTAMP",
+        "null": "Có",
+        "constraints": "Eloquent quản lý"
+      },
+      {
+        "name": "updated_at",
+        "type": "TIMESTAMP",
+        "null": "Có",
+        "constraints": "Eloquent quản lý"
+      }
+    ],
+    "orders": [
+      {
+        "name": "id",
+        "type": "BIGINT UNSIGNED",
+        "null": "Không",
+        "constraints": "PK; AUTO_INCREMENT"
+      },
+      {
+        "name": "user_id",
+        "type": "BIGINT UNSIGNED",
+        "null": "Không",
+        "constraints": "FK users.id; ON DELETE RESTRICT"
+      },
+      {
+        "name": "handled_by",
+        "type": "BIGINT UNSIGNED",
+        "null": "Có",
+        "constraints": "FK users.id; ON DELETE RESTRICT"
+      },
+      {
+        "name": "order_status_id",
+        "type": "BIGINT UNSIGNED",
+        "null": "Không",
+        "constraints": "DEFAULT 1; FK order_statuses.id; ON DELETE RESTRICT"
+      },
+      {
+        "name": "voucher_redemption_id",
+        "type": "BIGINT UNSIGNED",
+        "null": "Có",
+        "constraints": "UNIQUE; FK voucher_redemptions.id; ON DELETE RESTRICT"
+      },
+      {
+        "name": "checkout_token",
+        "type": "CHAR(36)",
+        "null": "Không",
+        "constraints": "UNIQUE"
+      },
+      {
+        "name": "subtotal",
+        "type": "DECIMAL(18,2)",
+        "null": "Không",
+        "constraints": "—"
+      },
+      {
+        "name": "discount",
+        "type": "DECIMAL(18,2)",
+        "null": "Không",
+        "constraints": "DEFAULT 0"
+      },
+      {
+        "name": "total",
+        "type": "DECIMAL(18,2)",
+        "null": "Không",
+        "constraints": "—"
+      },
+      {
+        "name": "is_paid",
+        "type": "TINYINT(1)",
+        "null": "Không",
+        "constraints": "DEFAULT false"
+      },
+      {
+        "name": "payment_method",
+        "type": "ENUM",
+        "null": "Không",
+        "constraints": "['cash', 'transfer']"
+      },
+      {
+        "name": "table_number",
+        "type": "SMALLINT UNSIGNED",
+        "null": "Có",
+        "constraints": "; FK dining_tables.number; ON DELETE RESTRICT"
+      },
+      {
+        "name": "delivery_address",
+        "type": "VARCHAR(255)",
+        "null": "Có",
+        "constraints": "—"
+      },
+      {
+        "name": "recipient_name",
+        "type": "VARCHAR(100)",
+        "null": "Có",
+        "constraints": "—"
+      },
+      {
+        "name": "recipient_phone",
+        "type": "VARCHAR(20)",
+        "null": "Có",
+        "constraints": "—"
+      },
+      {
+        "name": "note",
+        "type": "VARCHAR(255)",
+        "null": "Có",
+        "constraints": "—"
+      },
+      {
+        "name": "created_at",
+        "type": "TIMESTAMP",
+        "null": "Có",
+        "constraints": "Eloquent quản lý"
+      },
+      {
+        "name": "updated_at",
+        "type": "TIMESTAMP",
+        "null": "Có",
+        "constraints": "Eloquent quản lý"
+      },
+      {
+        "name": "payment_reported_at",
+        "type": "TIMESTAMP",
+        "null": "Có",
+        "constraints": "—"
+      },
+      {
+        "name": "payment_verified_at",
+        "type": "TIMESTAMP",
+        "null": "Có",
+        "constraints": "—"
+      },
+      {
+        "name": "payment_verified_by",
+        "type": "BIGINT UNSIGNED",
+        "null": "Có",
+        "constraints": "FK users.id; ON DELETE RESTRICT"
+      },
+      {
+        "name": "refund_required",
+        "type": "TINYINT(1)",
+        "null": "Không",
+        "constraints": "DEFAULT false"
+      }
+    ],
+    "order_items": [
+      {
+        "name": "id",
+        "type": "BIGINT UNSIGNED",
+        "null": "Không",
+        "constraints": "PK; AUTO_INCREMENT"
+      },
+      {
+        "name": "order_id",
+        "type": "BIGINT UNSIGNED",
+        "null": "Không",
+        "constraints": "FK orders.id; ON DELETE RESTRICT"
+      },
+      {
+        "name": "dish_id",
+        "type": "BIGINT UNSIGNED",
+        "null": "Không",
+        "constraints": "FK dishes.id; ON DELETE RESTRICT"
+      },
+      {
+        "name": "dish_name",
+        "type": "VARCHAR(200)",
+        "null": "Không",
+        "constraints": "—"
+      },
+      {
+        "name": "quantity",
+        "type": "SMALLINT UNSIGNED",
+        "null": "Không",
+        "constraints": "—"
+      },
+      {
+        "name": "unit_price",
+        "type": "DECIMAL(18,2)",
+        "null": "Không",
+        "constraints": "—"
+      },
+      {
+        "name": "created_at",
+        "type": "TIMESTAMP",
+        "null": "Có",
+        "constraints": "Eloquent quản lý"
+      },
+      {
+        "name": "updated_at",
+        "type": "TIMESTAMP",
+        "null": "Có",
+        "constraints": "Eloquent quản lý"
+      }
+    ],
+    "addresses": [
+      {
+        "name": "id",
+        "type": "BIGINT UNSIGNED",
+        "null": "Không",
+        "constraints": "PK; AUTO_INCREMENT"
+      },
+      {
+        "name": "user_id",
+        "type": "BIGINT UNSIGNED",
+        "null": "Không",
+        "constraints": "FK users.id; ON DELETE RESTRICT"
+      },
+      {
+        "name": "recipient_name",
+        "type": "VARCHAR(100)",
+        "null": "Không",
+        "constraints": "—"
+      },
+      {
+        "name": "phone",
+        "type": "VARCHAR(20)",
+        "null": "Không",
+        "constraints": "—"
+      },
+      {
+        "name": "address",
+        "type": "VARCHAR(255)",
+        "null": "Không",
+        "constraints": "—"
+      },
+      {
+        "name": "is_default",
+        "type": "TINYINT(1)",
+        "null": "Không",
+        "constraints": "DEFAULT false"
+      },
+      {
+        "name": "created_at",
+        "type": "TIMESTAMP",
+        "null": "Có",
+        "constraints": "Eloquent quản lý"
+      },
+      {
+        "name": "updated_at",
+        "type": "TIMESTAMP",
+        "null": "Có",
+        "constraints": "Eloquent quản lý"
+      }
+    ],
+    "reservations": [
+      {
+        "name": "id",
+        "type": "BIGINT UNSIGNED",
+        "null": "Không",
+        "constraints": "PK; AUTO_INCREMENT"
+      },
+      {
+        "name": "user_id",
+        "type": "BIGINT UNSIGNED",
+        "null": "Có",
+        "constraints": "FK users.id; ON DELETE RESTRICT"
+      },
+      {
+        "name": "name",
+        "type": "VARCHAR(100)",
+        "null": "Không",
+        "constraints": "—"
+      },
+      {
+        "name": "email",
+        "type": "VARCHAR(100)",
+        "null": "Không",
+        "constraints": "—"
+      },
+      {
+        "name": "phone",
+        "type": "VARCHAR(20)",
+        "null": "Không",
+        "constraints": "—"
+      },
+      {
+        "name": "reserved_at",
+        "type": "DATETIME",
+        "null": "Không",
+        "constraints": "—"
+      },
+      {
+        "name": "guests",
+        "type": "SMALLINT UNSIGNED",
+        "null": "Không",
+        "constraints": "—"
+      },
+      {
+        "name": "note",
+        "type": "VARCHAR(500)",
+        "null": "Có",
+        "constraints": "—"
+      },
+      {
+        "name": "status",
+        "type": "ENUM",
+        "null": "Không",
+        "constraints": "['pending', 'confirmed', 'cancelled']; DEFAULT 'pending'"
+      },
+      {
+        "name": "created_at",
+        "type": "TIMESTAMP",
+        "null": "Có",
+        "constraints": "Eloquent quản lý"
+      },
+      {
+        "name": "updated_at",
+        "type": "TIMESTAMP",
+        "null": "Có",
+        "constraints": "Eloquent quản lý"
+      },
+      {
+        "name": "table_number",
+        "type": "SMALLINT UNSIGNED",
+        "null": "Có",
+        "constraints": "INDEX; FK dining_tables.number; ON DELETE RESTRICT"
+      }
+    ],
+    "contacts": [
+      {
+        "name": "id",
+        "type": "BIGINT UNSIGNED",
+        "null": "Không",
+        "constraints": "PK; AUTO_INCREMENT"
+      },
+      {
+        "name": "name",
+        "type": "VARCHAR(100)",
+        "null": "Không",
+        "constraints": "—"
+      },
+      {
+        "name": "email",
+        "type": "VARCHAR(100)",
+        "null": "Không",
+        "constraints": "—"
+      },
+      {
+        "name": "phone",
+        "type": "VARCHAR(20)",
+        "null": "Có",
+        "constraints": "—"
+      },
+      {
+        "name": "subject",
+        "type": "VARCHAR(200)",
+        "null": "Không",
+        "constraints": "—"
+      },
+      {
+        "name": "message",
+        "type": "TEXT",
+        "null": "Không",
+        "constraints": "—"
+      },
+      {
+        "name": "is_read",
+        "type": "TINYINT(1)",
+        "null": "Không",
+        "constraints": "DEFAULT false"
+      },
+      {
+        "name": "created_at",
+        "type": "TIMESTAMP",
+        "null": "Có",
+        "constraints": "Eloquent quản lý"
+      },
+      {
+        "name": "updated_at",
+        "type": "TIMESTAMP",
+        "null": "Có",
+        "constraints": "Eloquent quản lý"
+      }
+    ],
+    "reviews": [
+      {
+        "name": "id",
+        "type": "BIGINT UNSIGNED",
+        "null": "Không",
+        "constraints": "PK; AUTO_INCREMENT"
+      },
+      {
+        "name": "dish_id",
+        "type": "BIGINT UNSIGNED",
+        "null": "Không",
+        "constraints": "FK dishes.id; ON DELETE RESTRICT"
+      },
+      {
+        "name": "user_id",
+        "type": "BIGINT UNSIGNED",
+        "null": "Không",
+        "constraints": "FK users.id; ON DELETE RESTRICT"
+      },
+      {
+        "name": "rating",
+        "type": "TINYINT UNSIGNED",
+        "null": "Không",
+        "constraints": "—"
+      },
+      {
+        "name": "message",
+        "type": "TEXT",
+        "null": "Không",
+        "constraints": "—"
+      },
+      {
+        "name": "image",
+        "type": "VARCHAR(255)",
+        "null": "Có",
+        "constraints": "—"
+      },
+      {
+        "name": "created_at",
+        "type": "TIMESTAMP",
+        "null": "Có",
+        "constraints": "Eloquent quản lý"
+      },
+      {
+        "name": "updated_at",
+        "type": "TIMESTAMP",
+        "null": "Có",
+        "constraints": "Eloquent quản lý"
+      }
+    ],
+    "dining_tables": [
+      {
+        "name": "number",
+        "type": "SMALLINT UNSIGNED",
+        "null": "Không",
+        "constraints": "PK"
+      }
+    ]
+  },
+  "notes": {
+    "roles": [],
+    "users": [],
+    "password_reset_tokens": [],
+    "sessions": [],
+    "cache": [],
+    "cache_locks": [],
+    "jobs": [],
+    "job_batches": [],
+    "failed_jobs": [
+      "INDEX ['connection', 'queue', 'failed_at']"
+    ],
+    "categories": [],
+    "suppliers": [],
+    "dishes": [],
+    "dish_images": [],
+    "order_statuses": [],
+    "vouchers": [],
+    "voucher_redemptions": [],
+    "orders": [
+      "INDEX ['user_id', 'created_at']",
+      "INDEX ['order_status_id', 'created_at']"
+    ],
+    "order_items": [
+      "UNIQUE ['order_id', 'dish_id']"
+    ],
+    "addresses": [],
+    "reservations": [],
+    "contacts": [],
+    "reviews": [
+      "UNIQUE ['dish_id', 'user_id']"
+    ],
+    "dining_tables": []
+  }
+}

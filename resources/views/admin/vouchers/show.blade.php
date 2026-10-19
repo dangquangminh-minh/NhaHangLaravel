@@ -1,0 +1,5 @@
+@extends('layouts.app')
+@section('title','Chi tiết Voucher')
+@section('content')
+<div class="card card-body p-4 form-panel"><h1 class="h3 mb-4">Chi tiết Voucher #{{ $record->id }}</h1><dl class="row"><dt class="col-sm-4">Tên voucher</dt><dd class="col-sm-8 preserve-lines">{{ $record->name }}</dd><dt class="col-sm-4">Giá trị giảm (đ)</dt><dd class="col-sm-8 preserve-lines">{{ \App\Support\Money::format($record->discount_amount) }}</dd><dt class="col-sm-4">Điểm đổi</dt><dd class="col-sm-8 preserve-lines">{{ $record->points_cost }}</dd><dt class="col-sm-4">Số lượng còn</dt><dd class="col-sm-8 preserve-lines">{{ $record->quantity }}</dd><dt class="col-sm-4">Ngày hết hạn</dt><dd class="col-sm-8 preserve-lines">{{ $record->expires_at->format("d/m/Y H:i") }}</dd></dl><div class="action-row"><a class="btn btn-primary" href="{{ route('admin.vouchers.edit',$record) }}">Chỉnh sửa</a><a class="btn btn-outline-secondary" href="{{ route('admin.vouchers.index') }}">Quay lại</a><x-delete :action="route('admin.vouchers.destroy',$record)" /></div></div>
+@endsection

@@ -1,0 +1,5 @@
+@extends('layouts.app')
+@section('title','Đổi điểm lấy voucher')
+@section('content')
+<h1 class="h2 mb-3">Đổi điểm lấy voucher</h1><div class="alert alert-info">Điểm khả dụng: <strong>{{ $points }}</strong>. Voucher đã đổi được lưu trong <a href="{{ route('profile.edit') }}">hồ sơ của bạn</a>.</div><div class="row g-4 mb-4">@forelse($records as $record)<div class="col-md-6 col-lg-4"><div class="card card-body h-100"><h2 class="h5">{{ $record->name }}</h2><p class="price fs-4">Giảm {{ \App\Support\Money::format($record->discount_amount) }}đ</p><p>Đổi bằng {{ $record->points_cost }} điểm · Còn {{ $record->quantity }}</p><small class="text-muted mb-3">Hạn: {{ $record->expires_at->format('d/m/Y H:i') }}</small><form method="post" action="{{ route('vouchers.redeem',$record) }}" data-confirm="Bạn muốn dùng {{ $record->points_cost }} điểm để đổi voucher này?">@csrf<button class="btn btn-primary" @disabled($points < $record->points_cost)>Đổi voucher</button></form></div></div>@empty<p class="empty">Hiện chưa có voucher còn hạn và còn số lượng.</p>@endforelse</div>{{ $records->links() }}
+@endsection

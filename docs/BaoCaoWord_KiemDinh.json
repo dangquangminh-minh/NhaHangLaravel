@@ -1,0 +1,126 @@
+{
+  "render": {
+    "round": 4,
+    "renderer": "Microsoft Word 16.0",
+    "total_pages": 89,
+    "main_first_physical_page": 14,
+    "main_last_physical_page": 63,
+    "main_first_printed_page": 1,
+    "main_last_printed_page": 50,
+    "main_words_word": 13967,
+    "total_words_word": 19764,
+    "field_count": 527,
+    "toc_count": 1,
+    "bookmarks": 69,
+    "sections": 3,
+    "main_pages": 50
+  },
+  "figures": 15,
+  "numbered_tables": 52,
+  "main_figures": 15,
+  "main_numbered_tables": 27,
+  "docx_tables_including_frontmatter": 53,
+  "repeated_table_headers": 52,
+  "native_caption_seq_fields": 67,
+  "native_toc_fields": 3,
+  "native_ref_fields": 67,
+  "missing_bookmarks": [],
+  "section_margins_twips": [
+    {
+      "top": 1417,
+      "right": 1134,
+      "bottom": 1417,
+      "left": 1984
+    },
+    {
+      "top": 1417,
+      "right": 1134,
+      "bottom": 1417,
+      "left": 1984
+    },
+    {
+      "top": 1417,
+      "right": 1134,
+      "bottom": 1417,
+      "left": 1984
+    }
+  ],
+  "styles": {
+    "Normal": {
+      "pt": 13.0,
+      "font": "Times New Roman"
+    },
+    "Heading1": {
+      "pt": 16.0,
+      "font": null
+    },
+    "Heading2": {
+      "pt": 14.0,
+      "font": null
+    },
+    "Heading3": {
+      "pt": null,
+      "font": null
+    },
+    "TableText": {
+      "pt": null,
+      "font": null
+    },
+    "Caption": {
+      "pt": null,
+      "font": null
+    },
+    "Reference": {
+      "pt": null,
+      "font": null
+    }
+  },
+  "pdf_fonts": [
+    "CambriaMath",
+    "TimesNewRomanPS-BoldMT",
+    "TimesNewRomanPSMT"
+  ],
+  "blank_pages": [],
+  "error_strings": [],
+  "text_outside_horizontal_print_area": [],
+  "citation_first_appearance": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9"
+  ],
+  "sources": 9,
+  "unchanged_ui_files": 39,
+  "unchanged_protected_backend_files": 84,
+  "source_hash_mismatches": [],
+  "application_test_results_read_not_rerun": {
+    "test-results-ui-final-sqlite.xml": {
+      "tests": "118",
+      "assertions": "598",
+      "errors": "0",
+      "failures": "0",
+      "skipped": "0",
+      "time": "13.266741"
+    },
+    "test-results-ui-final-mysql.xml": {
+      "tests": "118",
+      "assertions": "598",
+      "errors": "0",
+      "failures": "0",
+      "skipped": "0",
+      "time": "18.959253"
+    }
+  },
+  "review_renders": 4,
+  "repair_cycles_after_baseline": 3,
+  "unexpected_non_math_text_fonts": [],
+  "sha256": {
+    "BaoCaoDoAn_QuanLyNhaHang_Laravel_MySQL.docx": "1394f99a92b156735ede378b5813b97ad0b9cbc338f718f7e7bfbe95a0ee7a73",
+    "BaoCaoDoAn_QuanLyNhaHang_Laravel_MySQL.pdf": "930f6fc2267366c170076a2e15eac93aec9b854b429236f170a7ab0654925db9"
+  }
+}

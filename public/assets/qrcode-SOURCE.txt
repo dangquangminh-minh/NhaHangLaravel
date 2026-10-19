@@ -1,0 +1,4 @@
+QRCode.js: https://github.com/davidshimjs/qrcodejs
+Commit: 04f46c6a0708418cb7b96fc563eacae0fbf77674
+MIT license: qrcode-LICENSE.txt
+Asset cục bộ, không gọi dịch vụ QR bên ngoài.

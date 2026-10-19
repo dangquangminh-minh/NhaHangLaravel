@@ -1,0 +1,145 @@
+{
+  "date": "2026-10-18T11:27:19.369Z",
+  "round": 3,
+  "database": "nhahang_browser_feature_test",
+  "checks": [
+    {
+      "name": "desktop sidebar collapse is remembered across navigation",
+      "passed": true
+    },
+    {
+      "name": "submit displays spinner and locks duplicate submission without removing CSRF fields",
+      "passed": true
+    },
+    {
+      "name": "category creation posts successfully",
+      "passed": true
+    },
+    {
+      "name": "related dish creation preserves selected category and decimal money",
+      "passed": true
+    },
+    {
+      "name": "linked category deletion is rejected and reports business error",
+      "passed": true
+    },
+    {
+      "name": "dish editing preserves exact fractional amount",
+      "passed": true
+    },
+    {
+      "name": "confirmed dish deletion succeeds",
+      "passed": true
+    },
+    {
+      "name": "category can be deleted after removing its linked dish",
+      "passed": true
+    },
+    {
+      "name": "success message remains while keyboard focus is inside it",
+      "passed": true
+    },
+    {
+      "name": "success message dismisses after focus leaves and delay expires",
+      "passed": true
+    },
+    {
+      "name": "pointer hover highlights actual table row",
+      "passed": true
+    },
+    {
+      "name": "keyboard focus highlights actual table row",
+      "passed": true
+    },
+    {
+      "name": "computed production text contrast samples reach 4.5 to 1",
+      "passed": true,
+      "detail": [
+        {
+          "selector": "body",
+          "color": "rgb(28, 48, 38)",
+          "background": "rgb(245, 247, 243)",
+          "ratio": 12.99
+        },
+        {
+          "selector": ".text-muted",
+          "color": "rgb(88, 103, 94)",
+          "background": "rgb(245, 247, 243)",
+          "ratio": 5.54
+        },
+        {
+          "selector": ".btn-primary",
+          "color": "rgb(255, 255, 255)",
+          "background": "rgb(31, 90, 67)",
+          "ratio": 8.07
+        },
+        {
+          "selector": ".btn-outline-danger",
+          "color": "rgb(180, 49, 58)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 6.1
+        },
+        {
+          "selector": ".badge-status",
+          "color": "rgb(130, 83, 7)",
+          "background": "rgb(255, 244, 220)",
+          "ratio": 6.03
+        },
+        {
+          "selector": ".form-control",
+          "color": "rgb(28, 48, 38)",
+          "background": "rgb(255, 255, 255)",
+          "ratio": 14
+        }
+      ]
+    },
+    {
+      "name": "keyboard Tab advances from skip link to brand",
+      "passed": true
+    },
+    {
+      "name": "no uncaught JavaScript errors",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "contrasts": [
+    {
+      "selector": "body",
+      "color": "rgb(28, 48, 38)",
+      "background": "rgb(245, 247, 243)",
+      "ratio": 12.99
+    },
+    {
+      "selector": ".text-muted",
+      "color": "rgb(88, 103, 94)",
+      "background": "rgb(245, 247, 243)",
+      "ratio": 5.54
+    },
+    {
+      "selector": ".btn-primary",
+      "color": "rgb(255, 255, 255)",
+      "background": "rgb(31, 90, 67)",
+      "ratio": 8.07
+    },
+    {
+      "selector": ".btn-outline-danger",
+      "color": "rgb(180, 49, 58)",
+      "background": "rgb(255, 255, 255)",
+      "ratio": 6.1
+    },
+    {
+      "selector": ".badge-status",
+      "color": "rgb(130, 83, 7)",
+      "background": "rgb(255, 244, 220)",
+      "ratio": 6.03
+    },
+    {
+      "selector": ".form-control",
+      "color": "rgb(28, 48, 38)",
+      "background": "rgb(255, 255, 255)",
+      "ratio": 14
+    }
+  ],
+  "javascriptErrors": []
+}

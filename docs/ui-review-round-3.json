@@ -1,0 +1,2480 @@
+{
+  "date": "2026-10-18T11:13:16.610Z",
+  "browser": "Chrome headless",
+  "database": "nhahang_browser_feature_test",
+  "round": 3,
+  "checks": [
+    {
+      "name": "guest / 1440 fits and has accessible controls",
+      "passed": true,
+      "detail": {
+        "path": "/",
+        "title": "Trang chủ · Nhà Hàng Ngon",
+        "width": 1440,
+        "documentWidth": 1425,
+        "missingMain": false,
+        "tableHeadersMissingScope": 0,
+        "unlinkedErrors": [],
+        "missingCsrf": 0,
+        "smallButtons": [],
+        "unlabelledFields": [],
+        "navSticky": true,
+        "timing": [
+          {
+            "domContentLoaded": 536,
+            "load": 537
+          }
+        ]
+      }
+    },
+    {
+      "name": "guest /thuc-don 1440 fits and has accessible controls",
+      "passed": true,
+      "detail": {
+        "path": "/thuc-don",
+        "title": "Thực đơn · Nhà Hàng Ngon",
+        "width": 1440,
+        "documentWidth": 1425,
+        "missingMain": false,
+        "tableHeadersMissingScope": 0,
+        "unlinkedErrors": [],
+        "missingCsrf": 0,
+        "smallButtons": [],
+        "unlabelledFields": [],
+        "navSticky": true,
+        "timing": [
+          {
+            "domContentLoaded": 384,
+            "load": 386
+          }
+        ]
+      }
+    },
+    {
+      "name": "guest /dang-nhap 1440 fits and has accessible controls",
+      "passed": true,
+      "detail": {
+        "path": "/dang-nhap",
+        "title": "Đăng nhập · Nhà Hàng Ngon",
+        "width": 1440,
+        "documentWidth": 1440,
+        "missingMain": false,
+        "tableHeadersMissingScope": 0,
+        "unlinkedErrors": [],
+        "missingCsrf": 0,
+        "smallButtons": [],
+        "unlabelledFields": [],
+        "navSticky": true,
+        "timing": [
+          {
+            "domContentLoaded": 287,
+            "load": 289
+          }
+        ]
+      }
+    },
+    {
+      "name": "guest /dang-ky 1440 fits and has accessible controls",
+      "passed": true,
+      "detail": {
+        "path": "/dang-ky",
+        "title": "Đăng ký · Nhà Hàng Ngon",
+        "width": 1440,
+        "documentWidth": 1440,
+        "missingMain": false,
+        "tableHeadersMissingScope": 0,
+        "unlinkedErrors": [],
+        "missingCsrf": 0,
+        "smallButtons": [],
+        "unlabelledFields": [],
+        "navSticky": true,
+        "timing": [
+          {
+            "domContentLoaded": 283,
+            "load": 284
+          }
+        ]
+      }
+    },
+    {
+      "name": "guest /quen-mat-khau 1440 fits and has accessible controls",
+      "passed": true,
+      "detail": {
+        "path": "/quen-mat-khau",
+        "title": "Quên mật khẩu · Nhà Hàng Ngon",
+        "width": 1440,
+        "documentWidth": 1440,
+        "missingMain": false,
+        "tableHeadersMissingScope": 0,
+        "unlinkedErrors": [],
+        "missingCsrf": 0,
+        "smallButtons": [],
+        "unlabelledFields": [],
+        "navSticky": true,
+        "timing": [
+          {
+            "domContentLoaded": 296,
+            "load": 297
+          }
+        ]
+      }
+    },
+    {
+      "name": "guest /dat-lai-mat-khau/demo?email=user@example.test 1440 fits and has accessible controls",
+      "passed": true,
+      "detail": {
+        "path": "/dat-lai-mat-khau/demo",
+        "title": "Đặt lại mật khẩu · Nhà Hàng Ngon",
+        "width": 1440,
+        "documentWidth": 1440,
+        "missingMain": false,
+        "tableHeadersMissingScope": 0,
+        "unlinkedErrors": [],
+        "missingCsrf": 0,
+        "smallButtons": [],
+        "unlabelledFields": [],
+        "navSticky": true,
+        "timing": [
+          {
+            "domContentLoaded": 283,
+            "load": 284
+          }
+        ]
+      }
+    },
+    {
+      "name": "guest /dat-ban 1440 fits and has accessible controls",
+      "passed": true,
+      "detail": {
+        "path": "/dat-ban",
+        "title": "Đặt bàn · Nhà Hàng Ngon",
+        "width": 1440,
+        "documentWidth": 1440,
+        "missingMain": false,
+        "tableHeadersMissingScope": 0,
+        "unlinkedErrors": [],
+        "missingCsrf": 0,
+        "smallButtons": [],
+        "unlabelledFields": [],
+        "navSticky": true,
+        "timing": [
+          {
+            "domContentLoaded": 264,
+            "load": 265
+          }
+        ]
+      }
+    },
+    {
+      "name": "guest /lien-he 1440 fits and has accessible controls",
+      "passed": true,
+      "detail": {
+        "path": "/lien-he",
+        "title": "Liên hệ nhà hàng · Nhà Hàng Ngon",
+        "width": 1440,
+        "documentWidth": 1440,
+        "missingMain": false,
+        "tableHeadersMissingScope": 0,
+        "unlinkedErrors": [],
+        "missingCsrf": 0,
+        "smallButtons": [],
+        "unlabelledFields": [],
+        "navSticky": true,
+        "timing": [
+          {
+            "domContentLoaded": 333,
+            "load": 333
+          }
+        ]
+      }
+    },
+    {
+      "name": "guest /khong-co-trang-nay 1440 fits and has accessible controls",
+      "passed": true,
+      "detail": {
+        "path": "/khong-co-trang-nay",
+        "title": "Lỗi 404 · Nhà Hàng Ngon",
+        "width": 1440,
+        "documentWidth": 1440,
+        "missingMain": false,
+        "tableHeadersMissingScope": 0,
+        "unlinkedErrors": [],
+        "missingCsrf": 0,
+        "smallButtons": [],
+        "unlabelledFields": [],
+        "navSticky": true,
+        "timing": [
+          {
+            "domContentLoaded": 265,
+            "load": 265
+          }
+        ]
+      }
+    },
+    {
+      "name": "owner /admin 1440 fits and has accessible controls",
+      "passed": true,
+      "detail": {
+        "path": "/admin",
+        "title": "Tổng quan nhà hàng · Nhà Hàng Ngon",
+        "width": 1440,
+        "documentWidth": 1425,
+        "missingMain": false,
+        "tableHeadersMissingScope": 0,
+        "unlinkedErrors": [],
+        "missingCsrf": 0,
+        "smallButtons": [],
+        "unlabelledFields": [],
+        "navSticky": true,
+        "timing": [
+          {
+            "domContentLoaded": 398,
+            "load": 399
+          }
+        ]
+      }
+    },
+    {
+      "name": "owner /admin/orders 1440 fits and has accessible controls",
+      "passed": true,
+      "detail": {
+        "path": "/admin/orders",
+        "title": "Quản lý trạng thái đơn · Nhà Hàng Ngon",
+        "width": 1440,
+        "documentWidth": 1425,
+        "missingMain": false,
+        "tableHeadersMissingScope": 0,
+        "unlinkedErrors": [],
+        "missingCsrf": 0,
+        "smallButtons": [],
+        "unlabelledFields": [],
+        "navSticky": true,
+        "timing": [
+          {
+            "domContentLoaded": 361,
+            "load": 362
+          }
+        ]
+      }
+    },
+    {
+      "name": "owner /admin/dishes 1440 fits and has accessible controls",
+      "passed": true,
+      "detail": {
+        "path": "/admin/dishes",
+        "title": "Quản lý món ăn · Nhà Hàng Ngon",
+        "width": 1440,
+        "documentWidth": 1425,
+        "missingMain": false,
+        "tableHeadersMissingScope": 0,
+        "unlinkedErrors": [],
+        "missingCsrf": 0,
+        "smallButtons": [],
+        "unlabelledFields": [],
+        "navSticky": true,
+        "timing": [
+          {
+            "domContentLoaded": 369,
+            "load": 369
+          }
+        ]
+      }
+    },
+    {
+      "name": "owner /admin/categories 1440 fits and has accessible controls",
+      "passed": true,
+      "detail": {
+        "path": "/admin/categories",
+        "title": "Loại món · Nhà Hàng Ngon",
+        "width": 1440,
+        "documentWidth": 1425,
+        "missingMain": false,
+        "tableHeadersMissingScope": 0,
+        "unlinkedErrors": [],
+        "missingCsrf": 0,
+        "smallButtons": [],
+        "unlabelledFields": [],
+        "navSticky": true,
+        "timing": [
+          {
+            "domContentLoaded": 368,
+            "load": 369
+          }
+        ]
+      }
+    },
+    {
+      "name": "owner /admin/suppliers 1440 fits and has accessible controls",
+      "passed": true,
+      "detail": {
+        "path": "/admin/suppliers",
+        "title": "Nhà cung cấp · Nhà Hàng Ngon",
+        "width": 1440,
+        "documentWidth": 1425,
+        "missingMain": false,
+        "tableHeadersMissingScope": 0,
+        "unlinkedErrors": [],
+        "missingCsrf": 0,
+        "smallButtons": [],
+        "unlabelledFields": [],
+        "navSticky": true,
+        "timing": [
+          {
+            "domContentLoaded": 345,
+            "load": 346
+          }
+        ]
+      }
+    },
+    {
+      "name": "owner /admin/vouchers 1440 fits and has accessible controls",
+      "passed": true,
+      "detail": {
+        "path": "/admin/vouchers",
+        "title": "Voucher · Nhà Hàng Ngon",
+        "width": 1440,
+        "documentWidth": 1425,
+        "missingMain": false,
+        "tableHeadersMissingScope": 0,
+        "unlinkedErrors": [],
+        "missingCsrf": 0,
+        "smallButtons": [],
+        "unlabelledFields": [],
+        "navSticky": true,
+        "timing": [
+          {
+            "domContentLoaded": 346,
+            "load": 347
+          }
+        ]
+      }
+    },
+    {
+      "name": "owner /admin/contacts 1440 fits and has accessible controls",
+      "passed": true,
+      "detail": {
+        "path": "/admin/contacts",
+        "title": "Tin liên hệ · Nhà Hàng Ngon",
+        "width": 1440,
+        "documentWidth": 1425,
+        "missingMain": false,
+        "tableHeadersMissingScope": 0,
+        "unlinkedErrors": [],
+        "missingCsrf": 0,
+        "smallButtons": [],
+        "unlabelledFields": [],
+        "navSticky": true,
+        "timing": [
+          {
+            "domContentLoaded": 353,
+            "load": 354
+          }
+        ]
+      }
+    },
+    {
+      "name": "owner /admin/reviews 1440 fits and has accessible controls",
+      "passed": true,
+      "detail": {
+        "path": "/admin/reviews",
+        "title": "Quản lý đánh giá · Nhà Hàng Ngon",
+        "width": 1440,
+        "documentWidth": 1425,
+        "missingMain": false,
+        "tableHeadersMissingScope": 0,
+        "unlinkedErrors": [],
+        "missingCsrf": 0,
+        "smallButtons": [],
+        "unlabelledFields": [],
+        "navSticky": true,
+        "timing": [
+          {
+            "domContentLoaded": 363,
+            "load": 363
+          }
+        ]
+      }
+    },
+    {
+      "name": "owner /admin/accounts/staff 1440 fits and has accessible controls",
+      "passed": true,
+      "detail": {
+        "path": "/admin/accounts/staff",
+        "title": "Nhân viên · Nhà Hàng Ngon",
+        "width": 1440,
+        "documentWidth": 1425,
+        "missingMain": false,
+        "tableHeadersMissingScope": 0,
+        "unlinkedErrors": [],
+        "missingCsrf": 0,
+        "smallButtons": [],
+        "unlabelledFields": [],
+        "navSticky": true,
+        "timing": [
+          {
+            "domContentLoaded": 388,
+            "load": 390
+          }
+        ]
+      }
+    },
+    {
+      "name": "owner /admin/accounts/customers 1440 fits and has accessible controls",
+      "passed": true,
+      "detail": {
+        "path": "/admin/accounts/customers",
+        "title": "Khách hàng · Nhà Hàng Ngon",
+        "width": 1440,
+        "documentWidth": 1425,
+        "missingMain": false,
+        "tableHeadersMissingScope": 0,
+        "unlinkedErrors": [],
+        "missingCsrf": 0,
+        "smallButtons": [],
+        "unlabelledFields": [],
+        "navSticky": true,
+        "timing": [
+          {
+            "domContentLoaded": 377,
+            "load": 377
+          }
+        ]
+      }
+    },
+    {
+      "name": "owner /lich-dat-ban 1440 fits and has accessible controls",
+      "passed": true,
+      "detail": {
+        "path": "/lich-dat-ban",
+        "title": "Lịch đặt bàn · Nhà Hàng Ngon",
+        "width": 1440,
+        "documentWidth": 1425,
+        "missingMain": false,
+        "tableHeadersMissingScope": 0,
+        "unlinkedErrors": [],
+        "missingCsrf": 0,
+        "smallButtons": [],
+        "unlabelledFields": [],
+        "navSticky": true,
+        "timing": [
+          {
+            "domContentLoaded": 356,
+            "load": 358
+          }
+        ]
+      }
+    },
+    {
+      "name": "owner /ho-so 1440 fits and has accessible controls",
+      "passed": true,
+      "detail": {
+        "path": "/ho-so",
+        "title": "Hồ sơ cá nhân · Nhà Hàng Ngon",
+        "width": 1440,
+        "documentWidth": 1425,
+        "missingMain": false,
+        "tableHeadersMissingScope": 0,
+        "unlinkedErrors": [],
+        "missingCsrf": 0,
+        "smallButtons": [],
+        "unlabelledFields": [],
+        "navSticky": true,
+        "timing": [
+          {
+            "domContentLoaded": 357,
+            "load": 359
+          }
+        ]
+      }
+    },
+    {
+      "name": "owner /admin/dishes/create 1440 fits and has accessible controls",
+      "passed": true,
+      "detail": {
+        "path": "/admin/dishes/create",
+        "title": "Lưu món ăn · Nhà Hàng Ngon",
+        "width": 1440,
+        "documentWidth": 1425,
+        "missingMain": false,
+        "tableHeadersMissingScope": 0,
+        "unlinkedErrors": [],
+        "missingCsrf": 0,
+        "smallButtons": [],
+        "unlabelledFields": [],
+        "navSticky": true,
+        "timing": [
+          {
+            "domContentLoaded": 355,
+            "load": 356
+          }
+        ]
+      }
+    },
+    {
+      "name": "owner /admin/dishes/1 1440 fits and has accessible controls",
+      "passed": true,
+      "detail": {
+        "path": "/admin/dishes/1",
+        "title": "Gỏi Cuốn Tôm Thịt · Nhà Hàng Ngon",
+        "width": 1440,
+        "documentWidth": 1440,
+        "missingMain": false,
+        "tableHeadersMissingScope": 0,
+        "unlinkedErrors": [],
+        "missingCsrf": 0,
+        "smallButtons": [],
+        "unlabelledFields": [],
+        "navSticky": true,
+        "timing": [
+          {
+            "domContentLoaded": 342,
+            "load": 342
+          }
+        ]
+      }
+    },
+    {
+      "name": "owner /admin/dishes/1/edit 1440 fits and has accessible controls",
+      "passed": true,
+      "detail": {
+        "path": "/admin/dishes/1/edit",
+        "title": "Lưu món ăn · Nhà Hàng Ngon",
+        "width": 1440,
+        "documentWidth": 1425,
+        "missingMain": false,
+        "tableHeadersMissingScope": 0,
+        "unlinkedErrors": [],
+        "missingCsrf": 0,
+        "smallButtons": [],
+        "unlabelledFields": [],
+        "navSticky": true,
+        "timing": [
+          {
+            "domContentLoaded": 373,
+            "load": 374
+          }
+        ]
+      }
+    },
+    {
+      "name": "owner /admin/categories/create 1440 fits and has accessible controls",
+      "passed": true,
+      "detail": {
+        "path": "/admin/categories/create",
+        "title": "Lưu Loại món · Nhà Hàng Ngon",
+        "width": 1440,
+        "documentWidth": 1440,
+        "missingMain": false,
+        "tableHeadersMissingScope": 0,
+        "unlinkedErrors": [],
+        "missingCsrf": 0,
+        "smallButtons": [],
+        "unlabelledFields": [],
+        "navSticky": true,
+        "timing": [
+          {
+            "domContentLoaded": 388,
+            "load": 388
+          }
+        ]
+      }
+    },
+    {
+      "name": "owner /admin/categories/1 1440 fits and has accessible controls",
+      "passed": true,
+      "detail": {
+        "path": "/admin/categories/1",
+        "title": "Chi tiết Loại món · Nhà Hàng Ngon",
+        "width": 1440,
+        "documentWidth": 1440,
+        "missingMain": false,
+        "tableHeadersMissingScope": 0,
+        "unlinkedErrors": [],
+        "missingCsrf": 0,
+        "smallButtons": [],
+        "unlabelledFields": [],
+        "navSticky": true,
+        "timing": [
+          {
+            "domContentLoaded": 322,
+            "load": 322
+          }
+        ]
+      }
+    },
+    {
+      "name": "owner /admin/categories/1/edit 1440 fits and has accessible controls",
+      "passed": true,
+      "detail": {
+        "path": "/admin/categories/1/edit",
+        "title": "Lưu Loại món · Nhà Hàng Ngon",
+        "width": 1440,
+        "documentWidth": 1440,
+        "missingMain": false,
+        "tableHeadersMissingScope": 0,
+        "unlinkedErrors": [],
+        "missingCsrf": 0,
+        "smallButtons": [],
+        "unlabelledFields": [],
+        "navSticky": true,
+        "timing": [
+          {
+            "domContentLoaded": 315,
+            "load": 316
+          }
+        ]
+      }
+    },
+    {
+      "name": "owner /admin/suppliers/create 1440 fits and has accessible controls",
+      "passed": true,
+      "detail": {
+        "path": "/admin/suppliers/create",
+        "title": "Lưu Nhà cung cấp · Nhà Hàng Ngon",
+        "width": 1440,
+        "documentWidth": 1440,
+        "missingMain": false,
+        "tableHeadersMissingScope": 0,
+        "unlinkedErrors": [],
+        "missingCsrf": 0,
+        "smallButtons": [],
+        "unlabelledFields": [],
+        "navSticky": true,
+        "timing": [
+          {
+            "domContentLoaded": 362,
+            "load": 362
+          }
+        ]
+      }
+    },
+    {
+      "name": "owner /admin/suppliers/1 1440 fits and has accessible controls",
+      "passed": true,
+      "detail": {
+        "path": "/admin/suppliers/1",
+        "title": "Chi tiết Nhà cung cấp · Nhà Hàng Ngon",
+        "width": 1440,
+        "documentWidth": 1440,
+        "missingMain": false,
+        "tableHeadersMissingScope": 0,
+        "unlinkedErrors": [],
+        "missingCsrf": 0,
+        "smallButtons": [],
+        "unlabelledFields": [],
+        "navSticky": true,
+        "timing": [
+          {
+            "domContentLoaded": 367,
+            "load": 368
+          }
+        ]
+      }
+    },
+    {
+      "name": "owner /admin/suppliers/1/edit 1440 fits and has accessible controls",
+      "passed": true,
+      "detail": {
+        "path": "/admin/suppliers/1/edit",
+        "title": "Lưu Nhà cung cấp · Nhà Hàng Ngon",
+        "width": 1440,
+        "documentWidth": 1440,
+        "missingMain": false,
+        "tableHeadersMissingScope": 0,
+        "unlinkedErrors": [],
+        "missingCsrf": 0,
+        "smallButtons": [],
+        "unlabelledFields": [],
+        "navSticky": true,
+        "timing": [
+          {
+            "domContentLoaded": 352,
+            "load": 353
+          }
+        ]
+      }
+    },
+    {
+      "name": "owner /admin/vouchers/create 1440 fits and has accessible controls",
+      "passed": true,
+      "detail": {
+        "path": "/admin/vouchers/create",
+        "title": "Lưu Voucher · Nhà Hàng Ngon",
+        "width": 1440,
+        "documentWidth": 1440,
+        "missingMain": false,
+        "tableHeadersMissingScope": 0,
+        "unlinkedErrors": [],
+        "missingCsrf": 0,
+        "smallButtons": [],
+        "unlabelledFields": [],
+        "navSticky": true,
+        "timing": [
+          {
+            "domContentLoaded": 347,
+            "load": 348
+          }
+        ]
+      }
+    },
+    {
+      "name": "owner /admin/vouchers/1 1440 fits and has accessible controls",
+      "passed": true,
+      "detail": {
+        "path": "/admin/vouchers/1",
+        "title": "Chi tiết Voucher · Nhà Hàng Ngon",
+        "width": 1440,
+        "documentWidth": 1440,
+        "missingMain": false,
+        "tableHeadersMissingScope": 0,
+        "unlinkedErrors": [],
+        "missingCsrf": 0,
+        "smallButtons": [],
+        "unlabelledFields": [],
+        "navSticky": true,
+        "timing": [
+          {
+            "domContentLoaded": 344,
+            "load": 344
+          }
+        ]
+      }
+    },
+    {
+      "name": "owner /admin/vouchers/1/edit 1440 fits and has accessible controls",
+      "passed": true,
+      "detail": {
+        "path": "/admin/vouchers/1/edit",
+        "title": "Lưu Voucher · Nhà Hàng Ngon",
+        "width": 1440,
+        "documentWidth": 1440,
+        "missingMain": false,
+        "tableHeadersMissingScope": 0,
+        "unlinkedErrors": [],
+        "missingCsrf": 0,
+        "smallButtons": [],
+        "unlabelledFields": [],
+        "navSticky": true,
+        "timing": [
+          {
+            "domContentLoaded": 357,
+            "load": 357
+          }
+        ]
+      }
+    },
+    {
+      "name": "owner /admin/accounts/staff/create 1440 fits and has accessible controls",
+      "passed": true,
+      "detail": {
+        "path": "/admin/accounts/staff/create",
+        "title": "Lưu tài khoản · Nhà Hàng Ngon",
+        "width": 1440,
+        "documentWidth": 1425,
+        "missingMain": false,
+        "tableHeadersMissingScope": 0,
+        "unlinkedErrors": [],
+        "missingCsrf": 0,
+        "smallButtons": [],
+        "unlabelledFields": [],
+        "navSticky": true,
+        "timing": [
+          {
+            "domContentLoaded": 346,
+            "load": 347
+          }
+        ]
+      }
+    },
+    {
+      "name": "owner /admin/accounts/customers/create 1440 fits and has accessible controls",
+      "passed": true,
+      "detail": {
+        "path": "/admin/accounts/customers/create",
+        "title": "Lưu tài khoản · Nhà Hàng Ngon",
+        "width": 1440,
+        "documentWidth": 1440,
+        "missingMain": false,
+        "tableHeadersMissingScope": 0,
+        "unlinkedErrors": [],
+        "missingCsrf": 0,
+        "smallButtons": [],
+        "unlabelledFields": [],
+        "navSticky": true,
+        "timing": [
+          {
+            "domContentLoaded": 358,
+            "load": 360
+          }
+        ]
+      }
+    },
+    {
+      "name": "owner /admin/accounts/staff/2/edit 1440 fits and has accessible controls",
+      "passed": true,
+      "detail": {
+        "path": "/admin/accounts/staff/2/edit",
+        "title": "Lưu tài khoản · Nhà Hàng Ngon",
+        "width": 1440,
+        "documentWidth": 1425,
+        "missingMain": false,
+        "tableHeadersMissingScope": 0,
+        "unlinkedErrors": [],
+        "missingCsrf": 0,
+        "smallButtons": [],
+        "unlabelledFields": [],
+        "navSticky": true,
+        "timing": [
+          {
+            "domContentLoaded": 337,
+            "load": 338
+          }
+        ]
+      }
+    },
+    {
+      "name": "owner /admin/accounts/customers/3 1440 fits and has accessible controls",
+      "passed": true,
+      "detail": {
+        "path": "/admin/accounts/customers/3",
+        "title": "Thông tin tài khoản · Nhà Hàng Ngon",
+        "width": 1440,
+        "documentWidth": 1440,
+        "missingMain": false,
+        "tableHeadersMissingScope": 0,
+        "unlinkedErrors": [],
+        "missingCsrf": 0,
+        "smallButtons": [],
+        "unlabelledFields": [],
+        "navSticky": true,
+        "timing": [
+          {
+            "domContentLoaded": 318,
+            "load": 318
+          }
+        ]
+      }
+    },
+    {
+      "name": "owner /don-hang/1 1440 fits and has accessible controls",
+      "passed": true,
+      "detail": {
+        "path": "/don-hang/1",
+        "title": "Đơn hàng #1 · Nhà Hàng Ngon",
+        "width": 1440,
+        "documentWidth": 1440,
+        "missingMain": false,
+        "tableHeadersMissingScope": 0,
+        "unlinkedErrors": [],
+        "missingCsrf": 0,
+        "smallButtons": [],
+        "unlabelledFields": [],
+        "navSticky": true,
+        "timing": [
+          {
+            "domContentLoaded": 349,
+            "load": 349
+          }
+        ]
+      }
+    },
+    {
+      "name": "owner /admin/dishes 1440 fits and has accessible controls",
+      "passed": true,
+      "detail": {
+        "path": "/admin/dishes",
+        "title": "Quản lý món ăn · Nhà Hàng Ngon",
+        "width": 1440,
+        "documentWidth": 1425,
+        "missingMain": false,
+        "tableHeadersMissingScope": 0,
+        "unlinkedErrors": [],
+        "missingCsrf": 0,
+        "smallButtons": [],
+        "unlabelledFields": [],
+        "navSticky": true,
+        "timing": [
+          {
+            "domContentLoaded": 379,
+            "load": 380
+          }
+        ]
+      }
+    },
+    {
+      "name": "owner /admin/dishes 1024 fits and has accessible controls",
+      "passed": true,
+      "detail": {
+        "path": "/admin/dishes",
+        "title": "Quản lý món ăn · Nhà Hàng Ngon",
+        "width": 1024,
+        "documentWidth": 1009,
+        "missingMain": false,
+        "tableHeadersMissingScope": 0,
+        "unlinkedErrors": [],
+        "missingCsrf": 0,
+        "smallButtons": [],
+        "unlabelledFields": [],
+        "navSticky": true,
+        "timing": [
+          {
+            "domContentLoaded": 405,
+            "load": 440
+          }
+        ]
+      }
+    },
+    {
+      "name": "owner /admin/dishes 768 fits and has accessible controls",
+      "passed": true,
+      "detail": {
+        "path": "/admin/dishes",
+        "title": "Quản lý món ăn · Nhà Hàng Ngon",
+        "width": 768,
+        "documentWidth": 753,
+        "missingMain": false,
+        "tableHeadersMissingScope": 0,
+        "unlinkedErrors": [],
+        "missingCsrf": 0,
+        "smallButtons": [],
+        "unlabelledFields": [],
+        "navSticky": true,
+        "timing": [
+          {
+            "domContentLoaded": 400,
+            "load": 401
+          }
+        ]
+      }
+    },
+    {
+      "name": "owner /admin/dishes 360 fits and has accessible controls",
+      "passed": true,
+      "detail": {
+        "path": "/admin/dishes",
+        "title": "Quản lý món ăn · Nhà Hàng Ngon",
+        "width": 360,
+        "documentWidth": 345,
+        "missingMain": false,
+        "tableHeadersMissingScope": 0,
+        "unlinkedErrors": [],
+        "missingCsrf": 0,
+        "smallButtons": [],
+        "unlabelledFields": [],
+        "navSticky": true,
+        "timing": [
+          {
+            "domContentLoaded": 413,
+            "load": 415
+          }
+        ]
+      }
+    },
+    {
+      "name": "staff mobile drawer opens with backdrop",
+      "passed": true
+    },
+    {
+      "name": "drawer closes and returns focus",
+      "passed": true
+    },
+    {
+      "name": "selected rows and select-all are synchronized",
+      "passed": true
+    },
+    {
+      "name": "partial selection exposes indeterminate header",
+      "passed": true
+    },
+    {
+      "name": "table header is sticky within its scroll frame",
+      "passed": true
+    },
+    {
+      "name": "delete dialog names selected dish",
+      "passed": true
+    },
+    {
+      "name": "dialog Escape restores invoking button focus",
+      "passed": true
+    },
+    {
+      "name": "server errors remain linked and first invalid control receives focus",
+      "passed": true
+    },
+    {
+      "name": "operational admin cannot view revenue page",
+      "passed": true
+    },
+    {
+      "name": "cashier can view revenue report",
+      "passed": true
+    },
+    {
+      "name": "user /thuc-don 1440 fits and has accessible controls",
+      "passed": true,
+      "detail": {
+        "path": "/thuc-don",
+        "title": "Thực đơn · Nhà Hàng Ngon",
+        "width": 1440,
+        "documentWidth": 1425,
+        "missingMain": false,
+        "tableHeadersMissingScope": 0,
+        "unlinkedErrors": [],
+        "missingCsrf": 0,
+        "smallButtons": [],
+        "unlabelledFields": [],
+        "navSticky": true,
+        "timing": [
+          {
+            "domContentLoaded": 384,
+            "load": 385
+          }
+        ]
+      }
+    },
+    {
+      "name": "user /mon-an/1 1440 fits and has accessible controls",
+      "passed": true,
+      "detail": {
+        "path": "/mon-an/1",
+        "title": "Gỏi Cuốn Tôm Thịt · Nhà Hàng Ngon",
+        "width": 1440,
+        "documentWidth": 1425,
+        "missingMain": false,
+        "tableHeadersMissingScope": 0,
+        "unlinkedErrors": [],
+        "missingCsrf": 0,
+        "smallButtons": [],
+        "unlabelledFields": [],
+        "navSticky": true,
+        "timing": [
+          {
+            "domContentLoaded": 378,
+            "load": 379
+          }
+        ]
+      }
+    },
+    {
+      "name": "user /ho-so 1440 fits and has accessible controls",
+      "passed": true,
+      "detail": {
+        "path": "/ho-so",
+        "title": "Hồ sơ cá nhân · Nhà Hàng Ngon",
+        "width": 1440,
+        "documentWidth": 1425,
+        "missingMain": false,
+        "tableHeadersMissingScope": 0,
+        "unlinkedErrors": [],
+        "missingCsrf": 0,
+        "smallButtons": [],
+        "unlabelledFields": [],
+        "navSticky": true,
+        "timing": [
+          {
+            "domContentLoaded": 329,
+            "load": 331
+          }
+        ]
+      }
+    },
+    {
+      "name": "user /doi-voucher 1440 fits and has accessible controls",
+      "passed": true,
+      "detail": {
+        "path": "/doi-voucher",
+        "title": "Đổi điểm lấy voucher · Nhà Hàng Ngon",
+        "width": 1440,
+        "documentWidth": 1425,
+        "missingMain": false,
+        "tableHeadersMissingScope": 0,
+        "unlinkedErrors": [],
+        "missingCsrf": 0,
+        "smallButtons": [],
+        "unlabelledFields": [],
+        "navSticky": true,
+        "timing": [
+          {
+            "domContentLoaded": 352,
+            "load": 353
+          }
+        ]
+      }
+    },
+    {
+      "name": "user /dia-chi 1440 fits and has accessible controls",
+      "passed": true,
+      "detail": {
+        "path": "/dia-chi",
+        "title": "Địa chỉ giao hàng · Nhà Hàng Ngon",
+        "width": 1440,
+        "documentWidth": 1440,
+        "missingMain": false,
+        "tableHeadersMissingScope": 0,
+        "unlinkedErrors": [],
+        "missingCsrf": 0,
+        "smallButtons": [],
+        "unlabelledFields": [],
+        "navSticky": true,
+        "timing": [
+          {
+            "domContentLoaded": 328,
+            "load": 328
+          }
+        ]
+      }
+    },
+    {
+      "name": "user /dia-chi/create 1440 fits and has accessible controls",
+      "passed": true,
+      "detail": {
+        "path": "/dia-chi/create",
+        "title": "Lưu địa chỉ giao hàng · Nhà Hàng Ngon",
+        "width": 1440,
+        "documentWidth": 1440,
+        "missingMain": false,
+        "tableHeadersMissingScope": 0,
+        "unlinkedErrors": [],
+        "missingCsrf": 0,
+        "smallButtons": [],
+        "unlabelledFields": [],
+        "navSticky": true,
+        "timing": [
+          {
+            "domContentLoaded": 369,
+            "load": 370
+          }
+        ]
+      }
+    },
+    {
+      "name": "user /dia-chi/1 1440 fits and has accessible controls",
+      "passed": true,
+      "detail": {
+        "path": "/dia-chi/1",
+        "title": "Chi tiết địa chỉ · Nhà Hàng Ngon",
+        "width": 1440,
+        "documentWidth": 1440,
+        "missingMain": false,
+        "tableHeadersMissingScope": 0,
+        "unlinkedErrors": [],
+        "missingCsrf": 0,
+        "smallButtons": [],
+        "unlabelledFields": [],
+        "navSticky": true,
+        "timing": [
+          {
+            "domContentLoaded": 383,
+            "load": 383
+          }
+        ]
+      }
+    },
+    {
+      "name": "user /dia-chi/1/edit 1440 fits and has accessible controls",
+      "passed": true,
+      "detail": {
+        "path": "/dia-chi/1/edit",
+        "title": "Lưu địa chỉ giao hàng · Nhà Hàng Ngon",
+        "width": 1440,
+        "documentWidth": 1440,
+        "missingMain": false,
+        "tableHeadersMissingScope": 0,
+        "unlinkedErrors": [],
+        "missingCsrf": 0,
+        "smallButtons": [],
+        "unlabelledFields": [],
+        "navSticky": true,
+        "timing": [
+          {
+            "domContentLoaded": 362,
+            "load": 363
+          }
+        ]
+      }
+    },
+    {
+      "name": "user /don-hang 1440 fits and has accessible controls",
+      "passed": true,
+      "detail": {
+        "path": "/don-hang",
+        "title": "Đơn hàng · Nhà Hàng Ngon",
+        "width": 1440,
+        "documentWidth": 1425,
+        "missingMain": false,
+        "tableHeadersMissingScope": 0,
+        "unlinkedErrors": [],
+        "missingCsrf": 0,
+        "smallButtons": [],
+        "unlabelledFields": [],
+        "navSticky": true,
+        "timing": [
+          {
+            "domContentLoaded": 377,
+            "load": 377
+          }
+        ]
+      }
+    },
+    {
+      "name": "user /lich-dat-ban 1440 fits and has accessible controls",
+      "passed": true,
+      "detail": {
+        "path": "/lich-dat-ban",
+        "title": "Lịch đặt bàn · Nhà Hàng Ngon",
+        "width": 1440,
+        "documentWidth": 1440,
+        "missingMain": false,
+        "tableHeadersMissingScope": 0,
+        "unlinkedErrors": [],
+        "missingCsrf": 0,
+        "smallButtons": [],
+        "unlabelledFields": [],
+        "navSticky": true,
+        "timing": [
+          {
+            "domContentLoaded": 353,
+            "load": 353
+          }
+        ]
+      }
+    },
+    {
+      "name": "user /gio-hang 1440 fits and has accessible controls",
+      "passed": true,
+      "detail": {
+        "path": "/gio-hang",
+        "title": "Giỏ hàng · Nhà Hàng Ngon",
+        "width": 1440,
+        "documentWidth": 1440,
+        "missingMain": false,
+        "tableHeadersMissingScope": 0,
+        "unlinkedErrors": [],
+        "missingCsrf": 0,
+        "smallButtons": [],
+        "unlabelledFields": [],
+        "navSticky": true,
+        "timing": [
+          {
+            "domContentLoaded": 405,
+            "load": 406
+          }
+        ]
+      }
+    },
+    {
+      "name": "user /thuc-don 1024 fits and has accessible controls",
+      "passed": true,
+      "detail": {
+        "path": "/thuc-don",
+        "title": "Thực đơn · Nhà Hàng Ngon",
+        "width": 1024,
+        "documentWidth": 1009,
+        "missingMain": false,
+        "tableHeadersMissingScope": 0,
+        "unlinkedErrors": [],
+        "missingCsrf": 0,
+        "smallButtons": [],
+        "unlabelledFields": [],
+        "navSticky": true,
+        "timing": [
+          {
+            "domContentLoaded": 453,
+            "load": 455
+          }
+        ]
+      }
+    },
+    {
+      "name": "user /thuc-don 768 fits and has accessible controls",
+      "passed": true,
+      "detail": {
+        "path": "/thuc-don",
+        "title": "Thực đơn · Nhà Hàng Ngon",
+        "width": 768,
+        "documentWidth": 753,
+        "missingMain": false,
+        "tableHeadersMissingScope": 0,
+        "unlinkedErrors": [],
+        "missingCsrf": 0,
+        "smallButtons": [],
+        "unlabelledFields": [],
+        "navSticky": true,
+        "timing": [
+          {
+            "domContentLoaded": 348,
+            "load": 349
+          }
+        ]
+      }
+    },
+    {
+      "name": "user /thuc-don 360 fits and has accessible controls",
+      "passed": true,
+      "detail": {
+        "path": "/thuc-don",
+        "title": "Thực đơn · Nhà Hàng Ngon",
+        "width": 360,
+        "documentWidth": 345,
+        "missingMain": false,
+        "tableHeadersMissingScope": 0,
+        "unlinkedErrors": [],
+        "missingCsrf": 0,
+        "smallButtons": [],
+        "unlabelledFields": [],
+        "navSticky": true,
+        "timing": [
+          {
+            "domContentLoaded": 400,
+            "load": 401
+          }
+        ]
+      }
+    },
+    {
+      "name": "failed search retains previous dishes and offers retry",
+      "passed": true
+    },
+    {
+      "name": "retry exposes loading skeleton",
+      "passed": true
+    },
+    {
+      "name": "retry recovers without page reload",
+      "passed": true
+    },
+    {
+      "name": "reduced motion disables button and row animations",
+      "passed": true
+    },
+    {
+      "name": "no uncaught JavaScript errors",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "pages": [
+    {
+      "role": "guest",
+      "path": "/",
+      "title": "Trang chủ · Nhà Hàng Ngon",
+      "width": 1440,
+      "documentWidth": 1425,
+      "missingMain": false,
+      "tableHeadersMissingScope": 0,
+      "unlinkedErrors": [],
+      "missingCsrf": 0,
+      "smallButtons": [],
+      "unlabelledFields": [],
+      "navSticky": true,
+      "timing": [
+        {
+          "domContentLoaded": 536,
+          "load": 537
+        }
+      ]
+    },
+    {
+      "role": "guest",
+      "path": "/thuc-don",
+      "title": "Thực đơn · Nhà Hàng Ngon",
+      "width": 1440,
+      "documentWidth": 1425,
+      "missingMain": false,
+      "tableHeadersMissingScope": 0,
+      "unlinkedErrors": [],
+      "missingCsrf": 0,
+      "smallButtons": [],
+      "unlabelledFields": [],
+      "navSticky": true,
+      "timing": [
+        {
+          "domContentLoaded": 384,
+          "load": 386
+        }
+      ]
+    },
+    {
+      "role": "guest",
+      "path": "/dang-nhap",
+      "title": "Đăng nhập · Nhà Hàng Ngon",
+      "width": 1440,
+      "documentWidth": 1440,
+      "missingMain": false,
+      "tableHeadersMissingScope": 0,
+      "unlinkedErrors": [],
+      "missingCsrf": 0,
+      "smallButtons": [],
+      "unlabelledFields": [],
+      "navSticky": true,
+      "timing": [
+        {
+          "domContentLoaded": 287,
+          "load": 289
+        }
+      ]
+    },
+    {
+      "role": "guest",
+      "path": "/dang-ky",
+      "title": "Đăng ký · Nhà Hàng Ngon",
+      "width": 1440,
+      "documentWidth": 1440,
+      "missingMain": false,
+      "tableHeadersMissingScope": 0,
+      "unlinkedErrors": [],
+      "missingCsrf": 0,
+      "smallButtons": [],
+      "unlabelledFields": [],
+      "navSticky": true,
+      "timing": [
+        {
+          "domContentLoaded": 283,
+          "load": 284
+        }
+      ]
+    },
+    {
+      "role": "guest",
+      "path": "/quen-mat-khau",
+      "title": "Quên mật khẩu · Nhà Hàng Ngon",
+      "width": 1440,
+      "documentWidth": 1440,
+      "missingMain": false,
+      "tableHeadersMissingScope": 0,
+      "unlinkedErrors": [],
+      "missingCsrf": 0,
+      "smallButtons": [],
+      "unlabelledFields": [],
+      "navSticky": true,
+      "timing": [
+        {
+          "domContentLoaded": 296,
+          "load": 297
+        }
+      ]
+    },
+    {
+      "role": "guest",
+      "path": "/dat-lai-mat-khau/demo",
+      "title": "Đặt lại mật khẩu · Nhà Hàng Ngon",
+      "width": 1440,
+      "documentWidth": 1440,
+      "missingMain": false,
+      "tableHeadersMissingScope": 0,
+      "unlinkedErrors": [],
+      "missingCsrf": 0,
+      "smallButtons": [],
+      "unlabelledFields": [],
+      "navSticky": true,
+      "timing": [
+        {
+          "domContentLoaded": 283,
+          "load": 284
+        }
+      ]
+    },
+    {
+      "role": "guest",
+      "path": "/dat-ban",
+      "title": "Đặt bàn · Nhà Hàng Ngon",
+      "width": 1440,
+      "documentWidth": 1440,
+      "missingMain": false,
+      "tableHeadersMissingScope": 0,
+      "unlinkedErrors": [],
+      "missingCsrf": 0,
+      "smallButtons": [],
+      "unlabelledFields": [],
+      "navSticky": true,
+      "timing": [
+        {
+          "domContentLoaded": 264,
+          "load": 265
+        }
+      ]
+    },
+    {
+      "role": "guest",
+      "path": "/lien-he",
+      "title": "Liên hệ nhà hàng · Nhà Hàng Ngon",
+      "width": 1440,
+      "documentWidth": 1440,
+      "missingMain": false,
+      "tableHeadersMissingScope": 0,
+      "unlinkedErrors": [],
+      "missingCsrf": 0,
+      "smallButtons": [],
+      "unlabelledFields": [],
+      "navSticky": true,
+      "timing": [
+        {
+          "domContentLoaded": 333,
+          "load": 333
+        }
+      ]
+    },
+    {
+      "role": "guest",
+      "path": "/khong-co-trang-nay",
+      "title": "Lỗi 404 · Nhà Hàng Ngon",
+      "width": 1440,
+      "documentWidth": 1440,
+      "missingMain": false,
+      "tableHeadersMissingScope": 0,
+      "unlinkedErrors": [],
+      "missingCsrf": 0,
+      "smallButtons": [],
+      "unlabelledFields": [],
+      "navSticky": true,
+      "timing": [
+        {
+          "domContentLoaded": 265,
+          "load": 265
+        }
+      ]
+    },
+    {
+      "role": "owner",
+      "path": "/admin",
+      "title": "Tổng quan nhà hàng · Nhà Hàng Ngon",
+      "width": 1440,
+      "documentWidth": 1425,
+      "missingMain": false,
+      "tableHeadersMissingScope": 0,
+      "unlinkedErrors": [],
+      "missingCsrf": 0,
+      "smallButtons": [],
+      "unlabelledFields": [],
+      "navSticky": true,
+      "timing": [
+        {
+          "domContentLoaded": 398,
+          "load": 399
+        }
+      ]
+    },
+    {
+      "role": "owner",
+      "path": "/admin/orders",
+      "title": "Quản lý trạng thái đơn · Nhà Hàng Ngon",
+      "width": 1440,
+      "documentWidth": 1425,
+      "missingMain": false,
+      "tableHeadersMissingScope": 0,
+      "unlinkedErrors": [],
+      "missingCsrf": 0,
+      "smallButtons": [],
+      "unlabelledFields": [],
+      "navSticky": true,
+      "timing": [
+        {
+          "domContentLoaded": 361,
+          "load": 362
+        }
+      ]
+    },
+    {
+      "role": "owner",
+      "path": "/admin/dishes",
+      "title": "Quản lý món ăn · Nhà Hàng Ngon",
+      "width": 1440,
+      "documentWidth": 1425,
+      "missingMain": false,
+      "tableHeadersMissingScope": 0,
+      "unlinkedErrors": [],
+      "missingCsrf": 0,
+      "smallButtons": [],
+      "unlabelledFields": [],
+      "navSticky": true,
+      "timing": [
+        {
+          "domContentLoaded": 369,
+          "load": 369
+        }
+      ]
+    },
+    {
+      "role": "owner",
+      "path": "/admin/categories",
+      "title": "Loại món · Nhà Hàng Ngon",
+      "width": 1440,
+      "documentWidth": 1425,
+      "missingMain": false,
+      "tableHeadersMissingScope": 0,
+      "unlinkedErrors": [],
+      "missingCsrf": 0,
+      "smallButtons": [],
+      "unlabelledFields": [],
+      "navSticky": true,
+      "timing": [
+        {
+          "domContentLoaded": 368,
+          "load": 369
+        }
+      ]
+    },
+    {
+      "role": "owner",
+      "path": "/admin/suppliers",
+      "title": "Nhà cung cấp · Nhà Hàng Ngon",
+      "width": 1440,
+      "documentWidth": 1425,
+      "missingMain": false,
+      "tableHeadersMissingScope": 0,
+      "unlinkedErrors": [],
+      "missingCsrf": 0,
+      "smallButtons": [],
+      "unlabelledFields": [],
+      "navSticky": true,
+      "timing": [
+        {
+          "domContentLoaded": 345,
+          "load": 346
+        }
+      ]
+    },
+    {
+      "role": "owner",
+      "path": "/admin/vouchers",
+      "title": "Voucher · Nhà Hàng Ngon",
+      "width": 1440,
+      "documentWidth": 1425,
+      "missingMain": false,
+      "tableHeadersMissingScope": 0,
+      "unlinkedErrors": [],
+      "missingCsrf": 0,
+      "smallButtons": [],
+      "unlabelledFields": [],
+      "navSticky": true,
+      "timing": [
+        {
+          "domContentLoaded": 346,
+          "load": 347
+        }
+      ]
+    },
+    {
+      "role": "owner",
+      "path": "/admin/contacts",
+      "title": "Tin liên hệ · Nhà Hàng Ngon",
+      "width": 1440,
+      "documentWidth": 1425,
+      "missingMain": false,
+      "tableHeadersMissingScope": 0,
+      "unlinkedErrors": [],
+      "missingCsrf": 0,
+      "smallButtons": [],
+      "unlabelledFields": [],
+      "navSticky": true,
+      "timing": [
+        {
+          "domContentLoaded": 353,
+          "load": 354
+        }
+      ]
+    },
+    {
+      "role": "owner",
+      "path": "/admin/reviews",
+      "title": "Quản lý đánh giá · Nhà Hàng Ngon",
+      "width": 1440,
+      "documentWidth": 1425,
+      "missingMain": false,
+      "tableHeadersMissingScope": 0,
+      "unlinkedErrors": [],
+      "missingCsrf": 0,
+      "smallButtons": [],
+      "unlabelledFields": [],
+      "navSticky": true,
+      "timing": [
+        {
+          "domContentLoaded": 363,
+          "load": 363
+        }
+      ]
+    },
+    {
+      "role": "owner",
+      "path": "/admin/accounts/staff",
+      "title": "Nhân viên · Nhà Hàng Ngon",
+      "width": 1440,
+      "documentWidth": 1425,
+      "missingMain": false,
+      "tableHeadersMissingScope": 0,
+      "unlinkedErrors": [],
+      "missingCsrf": 0,
+      "smallButtons": [],
+      "unlabelledFields": [],
+      "navSticky": true,
+      "timing": [
+        {
+          "domContentLoaded": 388,
+          "load": 390
+        }
+      ]
+    },
+    {
+      "role": "owner",
+      "path": "/admin/accounts/customers",
+      "title": "Khách hàng · Nhà Hàng Ngon",
+      "width": 1440,
+      "documentWidth": 1425,
+      "missingMain": false,
+      "tableHeadersMissingScope": 0,
+      "unlinkedErrors": [],
+      "missingCsrf": 0,
+      "smallButtons": [],
+      "unlabelledFields": [],
+      "navSticky": true,
+      "timing": [
+        {
+          "domContentLoaded": 377,
+          "load": 377
+        }
+      ]
+    },
+    {
+      "role": "owner",
+      "path": "/lich-dat-ban",
+      "title": "Lịch đặt bàn · Nhà Hàng Ngon",
+      "width": 1440,
+      "documentWidth": 1425,
+      "missingMain": false,
+      "tableHeadersMissingScope": 0,
+      "unlinkedErrors": [],
+      "missingCsrf": 0,
+      "smallButtons": [],
+      "unlabelledFields": [],
+      "navSticky": true,
+      "timing": [
+        {
+          "domContentLoaded": 356,
+          "load": 358
+        }
+      ]
+    },
+    {
+      "role": "owner",
+      "path": "/ho-so",
+      "title": "Hồ sơ cá nhân · Nhà Hàng Ngon",
+      "width": 1440,
+      "documentWidth": 1425,
+      "missingMain": false,
+      "tableHeadersMissingScope": 0,
+      "unlinkedErrors": [],
+      "missingCsrf": 0,
+      "smallButtons": [],
+      "unlabelledFields": [],
+      "navSticky": true,
+      "timing": [
+        {
+          "domContentLoaded": 357,
+          "load": 359
+        }
+      ]
+    },
+    {
+      "role": "owner",
+      "path": "/admin/dishes/create",
+      "title": "Lưu món ăn · Nhà Hàng Ngon",
+      "width": 1440,
+      "documentWidth": 1425,
+      "missingMain": false,
+      "tableHeadersMissingScope": 0,
+      "unlinkedErrors": [],
+      "missingCsrf": 0,
+      "smallButtons": [],
+      "unlabelledFields": [],
+      "navSticky": true,
+      "timing": [
+        {
+          "domContentLoaded": 355,
+          "load": 356
+        }
+      ]
+    },
+    {
+      "role": "owner",
+      "path": "/admin/dishes/1",
+      "title": "Gỏi Cuốn Tôm Thịt · Nhà Hàng Ngon",
+      "width": 1440,
+      "documentWidth": 1440,
+      "missingMain": false,
+      "tableHeadersMissingScope": 0,
+      "unlinkedErrors": [],
+      "missingCsrf": 0,
+      "smallButtons": [],
+      "unlabelledFields": [],
+      "navSticky": true,
+      "timing": [
+        {
+          "domContentLoaded": 342,
+          "load": 342
+        }
+      ]
+    },
+    {
+      "role": "owner",
+      "path": "/admin/dishes/1/edit",
+      "title": "Lưu món ăn · Nhà Hàng Ngon",
+      "width": 1440,
+      "documentWidth": 1425,
+      "missingMain": false,
+      "tableHeadersMissingScope": 0,
+      "unlinkedErrors": [],
+      "missingCsrf": 0,
+      "smallButtons": [],
+      "unlabelledFields": [],
+      "navSticky": true,
+      "timing": [
+        {
+          "domContentLoaded": 373,
+          "load": 374
+        }
+      ]
+    },
+    {
+      "role": "owner",
+      "path": "/admin/categories/create",
+      "title": "Lưu Loại món · Nhà Hàng Ngon",
+      "width": 1440,
+      "documentWidth": 1440,
+      "missingMain": false,
+      "tableHeadersMissingScope": 0,
+      "unlinkedErrors": [],
+      "missingCsrf": 0,
+      "smallButtons": [],
+      "unlabelledFields": [],
+      "navSticky": true,
+      "timing": [
+        {
+          "domContentLoaded": 388,
+          "load": 388
+        }
+      ]
+    },
+    {
+      "role": "owner",
+      "path": "/admin/categories/1",
+      "title": "Chi tiết Loại món · Nhà Hàng Ngon",
+      "width": 1440,
+      "documentWidth": 1440,
+      "missingMain": false,
+      "tableHeadersMissingScope": 0,
+      "unlinkedErrors": [],
+      "missingCsrf": 0,
+      "smallButtons": [],
+      "unlabelledFields": [],
+      "navSticky": true,
+      "timing": [
+        {
+          "domContentLoaded": 322,
+          "load": 322
+        }
+      ]
+    },
+    {
+      "role": "owner",
+      "path": "/admin/categories/1/edit",
+      "title": "Lưu Loại món · Nhà Hàng Ngon",
+      "width": 1440,
+      "documentWidth": 1440,
+      "missingMain": false,
+      "tableHeadersMissingScope": 0,
+      "unlinkedErrors": [],
+      "missingCsrf": 0,
+      "smallButtons": [],
+      "unlabelledFields": [],
+      "navSticky": true,
+      "timing": [
+        {
+          "domContentLoaded": 315,
+          "load": 316
+        }
+      ]
+    },
+    {
+      "role": "owner",
+      "path": "/admin/suppliers/create",
+      "title": "Lưu Nhà cung cấp · Nhà Hàng Ngon",
+      "width": 1440,
+      "documentWidth": 1440,
+      "missingMain": false,
+      "tableHeadersMissingScope": 0,
+      "unlinkedErrors": [],
+      "missingCsrf": 0,
+      "smallButtons": [],
+      "unlabelledFields": [],
+      "navSticky": true,
+      "timing": [
+        {
+          "domContentLoaded": 362,
+          "load": 362
+        }
+      ]
+    },
+    {
+      "role": "owner",
+      "path": "/admin/suppliers/1",
+      "title": "Chi tiết Nhà cung cấp · Nhà Hàng Ngon",
+      "width": 1440,
+      "documentWidth": 1440,
+      "missingMain": false,
+      "tableHeadersMissingScope": 0,
+      "unlinkedErrors": [],
+      "missingCsrf": 0,
+      "smallButtons": [],
+      "unlabelledFields": [],
+      "navSticky": true,
+      "timing": [
+        {
+          "domContentLoaded": 367,
+          "load": 368
+        }
+      ]
+    },
+    {
+      "role": "owner",
+      "path": "/admin/suppliers/1/edit",
+      "title": "Lưu Nhà cung cấp · Nhà Hàng Ngon",
+      "width": 1440,
+      "documentWidth": 1440,
+      "missingMain": false,
+      "tableHeadersMissingScope": 0,
+      "unlinkedErrors": [],
+      "missingCsrf": 0,
+      "smallButtons": [],
+      "unlabelledFields": [],
+      "navSticky": true,
+      "timing": [
+        {
+          "domContentLoaded": 352,
+          "load": 353
+        }
+      ]
+    },
+    {
+      "role": "owner",
+      "path": "/admin/vouchers/create",
+      "title": "Lưu Voucher · Nhà Hàng Ngon",
+      "width": 1440,
+      "documentWidth": 1440,
+      "missingMain": false,
+      "tableHeadersMissingScope": 0,
+      "unlinkedErrors": [],
+      "missingCsrf": 0,
+      "smallButtons": [],
+      "unlabelledFields": [],
+      "navSticky": true,
+      "timing": [
+        {
+          "domContentLoaded": 347,
+          "load": 348
+        }
+      ]
+    },
+    {
+      "role": "owner",
+      "path": "/admin/vouchers/1",
+      "title": "Chi tiết Voucher · Nhà Hàng Ngon",
+      "width": 1440,
+      "documentWidth": 1440,
+      "missingMain": false,
+      "tableHeadersMissingScope": 0,
+      "unlinkedErrors": [],
+      "missingCsrf": 0,
+      "smallButtons": [],
+      "unlabelledFields": [],
+      "navSticky": true,
+      "timing": [
+        {
+          "domContentLoaded": 344,
+          "load": 344
+        }
+      ]
+    },
+    {
+      "role": "owner",
+      "path": "/admin/vouchers/1/edit",
+      "title": "Lưu Voucher · Nhà Hàng Ngon",
+      "width": 1440,
+      "documentWidth": 1440,
+      "missingMain": false,
+      "tableHeadersMissingScope": 0,
+      "unlinkedErrors": [],
+      "missingCsrf": 0,
+      "smallButtons": [],
+      "unlabelledFields": [],
+      "navSticky": true,
+      "timing": [
+        {
+          "domContentLoaded": 357,
+          "load": 357
+        }
+      ]
+    },
+    {
+      "role": "owner",
+      "path": "/admin/accounts/staff/create",
+      "title": "Lưu tài khoản · Nhà Hàng Ngon",
+      "width": 1440,
+      "documentWidth": 1425,
+      "missingMain": false,
+      "tableHeadersMissingScope": 0,
+      "unlinkedErrors": [],
+      "missingCsrf": 0,
+      "smallButtons": [],
+      "unlabelledFields": [],
+      "navSticky": true,
+      "timing": [
+        {
+          "domContentLoaded": 346,
+          "load": 347
+        }
+      ]
+    },
+    {
+      "role": "owner",
+      "path": "/admin/accounts/customers/create",
+      "title": "Lưu tài khoản · Nhà Hàng Ngon",
+      "width": 1440,
+      "documentWidth": 1440,
+      "missingMain": false,
+      "tableHeadersMissingScope": 0,
+      "unlinkedErrors": [],
+      "missingCsrf": 0,
+      "smallButtons": [],
+      "unlabelledFields": [],
+      "navSticky": true,
+      "timing": [
+        {
+          "domContentLoaded": 358,
+          "load": 360
+        }
+      ]
+    },
+    {
+      "role": "owner",
+      "path": "/admin/accounts/staff/2/edit",
+      "title": "Lưu tài khoản · Nhà Hàng Ngon",
+      "width": 1440,
+      "documentWidth": 1425,
+      "missingMain": false,
+      "tableHeadersMissingScope": 0,
+      "unlinkedErrors": [],
+      "missingCsrf": 0,
+      "smallButtons": [],
+      "unlabelledFields": [],
+      "navSticky": true,
+      "timing": [
+        {
+          "domContentLoaded": 337,
+          "load": 338
+        }
+      ]
+    },
+    {
+      "role": "owner",
+      "path": "/admin/accounts/customers/3",
+      "title": "Thông tin tài khoản · Nhà Hàng Ngon",
+      "width": 1440,
+      "documentWidth": 1440,
+      "missingMain": false,
+      "tableHeadersMissingScope": 0,
+      "unlinkedErrors": [],
+      "missingCsrf": 0,
+      "smallButtons": [],
+      "unlabelledFields": [],
+      "navSticky": true,
+      "timing": [
+        {
+          "domContentLoaded": 318,
+          "load": 318
+        }
+      ]
+    },
+    {
+      "role": "owner",
+      "path": "/don-hang/1",
+      "title": "Đơn hàng #1 · Nhà Hàng Ngon",
+      "width": 1440,
+      "documentWidth": 1440,
+      "missingMain": false,
+      "tableHeadersMissingScope": 0,
+      "unlinkedErrors": [],
+      "missingCsrf": 0,
+      "smallButtons": [],
+      "unlabelledFields": [],
+      "navSticky": true,
+      "timing": [
+        {
+          "domContentLoaded": 349,
+          "load": 349
+        }
+      ]
+    },
+    {
+      "role": "owner",
+      "path": "/admin/dishes",
+      "title": "Quản lý món ăn · Nhà Hàng Ngon",
+      "width": 1440,
+      "documentWidth": 1425,
+      "missingMain": false,
+      "tableHeadersMissingScope": 0,
+      "unlinkedErrors": [],
+      "missingCsrf": 0,
+      "smallButtons": [],
+      "unlabelledFields": [],
+      "navSticky": true,
+      "timing": [
+        {
+          "domContentLoaded": 379,
+          "load": 380
+        }
+      ]
+    },
+    {
+      "role": "owner",
+      "path": "/admin/dishes",
+      "title": "Quản lý món ăn · Nhà Hàng Ngon",
+      "width": 1024,
+      "documentWidth": 1009,
+      "missingMain": false,
+      "tableHeadersMissingScope": 0,
+      "unlinkedErrors": [],
+      "missingCsrf": 0,
+      "smallButtons": [],
+      "unlabelledFields": [],
+      "navSticky": true,
+      "timing": [
+        {
+          "domContentLoaded": 405,
+          "load": 440
+        }
+      ]
+    },
+    {
+      "role": "owner",
+      "path": "/admin/dishes",
+      "title": "Quản lý món ăn · Nhà Hàng Ngon",
+      "width": 768,
+      "documentWidth": 753,
+      "missingMain": false,
+      "tableHeadersMissingScope": 0,
+      "unlinkedErrors": [],
+      "missingCsrf": 0,
+      "smallButtons": [],
+      "unlabelledFields": [],
+      "navSticky": true,
+      "timing": [
+        {
+          "domContentLoaded": 400,
+          "load": 401
+        }
+      ]
+    },
+    {
+      "role": "owner",
+      "path": "/admin/dishes",
+      "title": "Quản lý món ăn · Nhà Hàng Ngon",
+      "width": 360,
+      "documentWidth": 345,
+      "missingMain": false,
+      "tableHeadersMissingScope": 0,
+      "unlinkedErrors": [],
+      "missingCsrf": 0,
+      "smallButtons": [],
+      "unlabelledFields": [],
+      "navSticky": true,
+      "timing": [
+        {
+          "domContentLoaded": 413,
+          "load": 415
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "path": "/thuc-don",
+      "title": "Thực đơn · Nhà Hàng Ngon",
+      "width": 1440,
+      "documentWidth": 1425,
+      "missingMain": false,
+      "tableHeadersMissingScope": 0,
+      "unlinkedErrors": [],
+      "missingCsrf": 0,
+      "smallButtons": [],
+      "unlabelledFields": [],
+      "navSticky": true,
+      "timing": [
+        {
+          "domContentLoaded": 384,
+          "load": 385
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "path": "/mon-an/1",
+      "title": "Gỏi Cuốn Tôm Thịt · Nhà Hàng Ngon",
+      "width": 1440,
+      "documentWidth": 1425,
+      "missingMain": false,
+      "tableHeadersMissingScope": 0,
+      "unlinkedErrors": [],
+      "missingCsrf": 0,
+      "smallButtons": [],
+      "unlabelledFields": [],
+      "navSticky": true,
+      "timing": [
+        {
+          "domContentLoaded": 378,
+          "load": 379
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "path": "/ho-so",
+      "title": "Hồ sơ cá nhân · Nhà Hàng Ngon",
+      "width": 1440,
+      "documentWidth": 1425,
+      "missingMain": false,
+      "tableHeadersMissingScope": 0,
+      "unlinkedErrors": [],
+      "missingCsrf": 0,
+      "smallButtons": [],
+      "unlabelledFields": [],
+      "navSticky": true,
+      "timing": [
+        {
+          "domContentLoaded": 329,
+          "load": 331
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "path": "/doi-voucher",
+      "title": "Đổi điểm lấy voucher · Nhà Hàng Ngon",
+      "width": 1440,
+      "documentWidth": 1425,
+      "missingMain": false,
+      "tableHeadersMissingScope": 0,
+      "unlinkedErrors": [],
+      "missingCsrf": 0,
+      "smallButtons": [],
+      "unlabelledFields": [],
+      "navSticky": true,
+      "timing": [
+        {
+          "domContentLoaded": 352,
+          "load": 353
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "path": "/dia-chi",
+      "title": "Địa chỉ giao hàng · Nhà Hàng Ngon",
+      "width": 1440,
+      "documentWidth": 1440,
+      "missingMain": false,
+      "tableHeadersMissingScope": 0,
+      "unlinkedErrors": [],
+      "missingCsrf": 0,
+      "smallButtons": [],
+      "unlabelledFields": [],
+      "navSticky": true,
+      "timing": [
+        {
+          "domContentLoaded": 328,
+          "load": 328
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "path": "/dia-chi/create",
+      "title": "Lưu địa chỉ giao hàng · Nhà Hàng Ngon",
+      "width": 1440,
+      "documentWidth": 1440,
+      "missingMain": false,
+      "tableHeadersMissingScope": 0,
+      "unlinkedErrors": [],
+      "missingCsrf": 0,
+      "smallButtons": [],
+      "unlabelledFields": [],
+      "navSticky": true,
+      "timing": [
+        {
+          "domContentLoaded": 369,
+          "load": 370
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "path": "/dia-chi/1",
+      "title": "Chi tiết địa chỉ · Nhà Hàng Ngon",
+      "width": 1440,
+      "documentWidth": 1440,
+      "missingMain": false,
+      "tableHeadersMissingScope": 0,
+      "unlinkedErrors": [],
+      "missingCsrf": 0,
+      "smallButtons": [],
+      "unlabelledFields": [],
+      "navSticky": true,
+      "timing": [
+        {
+          "domContentLoaded": 383,
+          "load": 383
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "path": "/dia-chi/1/edit",
+      "title": "Lưu địa chỉ giao hàng · Nhà Hàng Ngon",
+      "width": 1440,
+      "documentWidth": 1440,
+      "missingMain": false,
+      "tableHeadersMissingScope": 0,
+      "unlinkedErrors": [],
+      "missingCsrf": 0,
+      "smallButtons": [],
+      "unlabelledFields": [],
+      "navSticky": true,
+      "timing": [
+        {
+          "domContentLoaded": 362,
+          "load": 363
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "path": "/don-hang",
+      "title": "Đơn hàng · Nhà Hàng Ngon",
+      "width": 1440,
+      "documentWidth": 1425,
+      "missingMain": false,
+      "tableHeadersMissingScope": 0,
+      "unlinkedErrors": [],
+      "missingCsrf": 0,
+      "smallButtons": [],
+      "unlabelledFields": [],
+      "navSticky": true,
+      "timing": [
+        {
+          "domContentLoaded": 377,
+          "load": 377
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "path": "/lich-dat-ban",
+      "title": "Lịch đặt bàn · Nhà Hàng Ngon",
+      "width": 1440,
+      "documentWidth": 1440,
+      "missingMain": false,
+      "tableHeadersMissingScope": 0,
+      "unlinkedErrors": [],
+      "missingCsrf": 0,
+      "smallButtons": [],
+      "unlabelledFields": [],
+      "navSticky": true,
+      "timing": [
+        {
+          "domContentLoaded": 353,
+          "load": 353
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "path": "/gio-hang",
+      "title": "Giỏ hàng · Nhà Hàng Ngon",
+      "width": 1440,
+      "documentWidth": 1440,
+      "missingMain": false,
+      "tableHeadersMissingScope": 0,
+      "unlinkedErrors": [],
+      "missingCsrf": 0,
+      "smallButtons": [],
+      "unlabelledFields": [],
+      "navSticky": true,
+      "timing": [
+        {
+          "domContentLoaded": 405,
+          "load": 406
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "path": "/thuc-don",
+      "title": "Thực đơn · Nhà Hàng Ngon",
+      "width": 1024,
+      "documentWidth": 1009,
+      "missingMain": false,
+      "tableHeadersMissingScope": 0,
+      "unlinkedErrors": [],
+      "missingCsrf": 0,
+      "smallButtons": [],
+      "unlabelledFields": [],
+      "navSticky": true,
+      "timing": [
+        {
+          "domContentLoaded": 453,
+          "load": 455
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "path": "/thuc-don",
+      "title": "Thực đơn · Nhà Hàng Ngon",
+      "width": 768,
+      "documentWidth": 753,
+      "missingMain": false,
+      "tableHeadersMissingScope": 0,
+      "unlinkedErrors": [],
+      "missingCsrf": 0,
+      "smallButtons": [],
+      "unlabelledFields": [],
+      "navSticky": true,
+      "timing": [
+        {
+          "domContentLoaded": 348,
+          "load": 349
+        }
+      ]
+    },
+    {
+      "role": "user",
+      "path": "/thuc-don",
+      "title": "Thực đơn · Nhà Hàng Ngon",
+      "width": 360,
+      "documentWidth": 345,
+      "missingMain": false,
+      "tableHeadersMissingScope": 0,
+      "unlinkedErrors": [],
+      "missingCsrf": 0,
+      "smallButtons": [],
+      "unlabelledFields": [],
+      "navSticky": true,
+      "timing": [
+        {
+          "domContentLoaded": 400,
+          "load": 401
+        }
+      ]
+    }
+  ],
+  "javascriptErrors": []
+}

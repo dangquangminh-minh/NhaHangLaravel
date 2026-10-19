@@ -1,0 +1,60 @@
+{
+  "date": "2026-10-18",
+  "browser": "Chrome headless",
+  "database": "nhahang_browser_feature_test",
+  "orderPath": "/don-hang/38",
+  "checks": [
+    {
+      "name": "customer login",
+      "passed": true
+    },
+    {
+      "name": "initial cart quantity one",
+      "passed": true
+    },
+    {
+      "name": "plus reload updates quantity and amount",
+      "passed": true
+    },
+    {
+      "name": "minus zero opens confirmation",
+      "passed": true
+    },
+    {
+      "name": "cancel delete retains one",
+      "passed": true
+    },
+    {
+      "name": "confirm delete removes cart item",
+      "passed": true
+    },
+    {
+      "name": "online checkout renders local QR and remains unpaid waiting",
+      "passed": true
+    },
+    {
+      "name": "customer report still awaits verification",
+      "passed": true
+    },
+    {
+      "name": "staff management navigation excludes customer menu",
+      "passed": true
+    },
+    {
+      "name": "employee verification leaves fulfillment waiting",
+      "passed": true
+    },
+    {
+      "name": "admin forbidden statistics",
+      "passed": true
+    },
+    {
+      "name": "owner sees two sales charts",
+      "passed": true
+    },
+    {
+      "name": "mobile viewport has no horizontal overflow",
+      "passed": true
+    }
+  ]
+}

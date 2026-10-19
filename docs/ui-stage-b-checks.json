@@ -1,0 +1,280 @@
+{
+  "date": "2026-10-18",
+  "browser": "Chrome headless",
+  "checks": [
+    {
+      "name": "standalone preview loads with six sample rows",
+      "passed": true
+    },
+    {
+      "name": "skip link can receive keyboard focus",
+      "passed": true
+    },
+    {
+      "name": "Tab advances to brand link",
+      "passed": true
+    },
+    {
+      "name": "viewport 1440 has no document overflow",
+      "passed": true
+    },
+    {
+      "name": "viewport 1024 has no document overflow",
+      "passed": true
+    },
+    {
+      "name": "viewport 768 has no document overflow",
+      "passed": true
+    },
+    {
+      "name": "viewport 360 has no document overflow",
+      "passed": true
+    },
+    {
+      "name": "mobile drawer opens with backdrop",
+      "passed": true
+    },
+    {
+      "name": "mobile drawer closes with Escape",
+      "passed": true
+    },
+    {
+      "name": "sample search filters to requested order",
+      "passed": true
+    },
+    {
+      "name": "empty state appears for no results",
+      "passed": true
+    },
+    {
+      "name": "sample status filter matches one row",
+      "passed": true
+    },
+    {
+      "name": "table header stays sticky while its frame scrolls",
+      "passed": true
+    },
+    {
+      "name": "checked rows show selected state",
+      "passed": true
+    },
+    {
+      "name": "sample sort ascending sets aria-sort and row order",
+      "passed": true
+    },
+    {
+      "name": "sample sort descending sets aria-sort and row order",
+      "passed": true
+    },
+    {
+      "name": "details modal shows selected sample order",
+      "passed": true
+    },
+    {
+      "name": "details modal returns keyboard focus",
+      "passed": true
+    },
+    {
+      "name": "confirmation names the sample item",
+      "passed": true
+    },
+    {
+      "name": "confirmation shows demo feedback",
+      "passed": true
+    },
+    {
+      "name": "valid name does not reference hidden error",
+      "passed": true
+    },
+    {
+      "name": "invalid input keeps linked error and focuses price",
+      "passed": true
+    },
+    {
+      "name": "name error is linked only when invalid",
+      "passed": true
+    },
+    {
+      "name": "sample save has loading and disabled state",
+      "passed": true
+    },
+    {
+      "name": "sample save completes with accessible toast",
+      "passed": true
+    },
+    {
+      "name": "direct quantity 49 updates sample total exactly",
+      "passed": true
+    },
+    {
+      "name": "retry completes with recovery message",
+      "passed": true
+    },
+    {
+      "name": "reduced-motion disables preview transitions and animations",
+      "passed": true
+    },
+    {
+      "name": "manual motion toggle is exposed through aria-pressed",
+      "passed": true
+    },
+    {
+      "name": "sample text contrast pairs reach 4.5 to 1",
+      "passed": true
+    },
+    {
+      "name": "all visible sample buttons reach 44px at tested viewports",
+      "passed": true
+    },
+    {
+      "name": "no browser JavaScript or resource errors",
+      "passed": true
+    },
+    {
+      "name": "manual motion toggle also disables modal and drawer transitions",
+      "passed": true
+    },
+    {
+      "name": "system reduced motion also disables modal and drawer transitions",
+      "passed": true
+    }
+  ],
+  "widths": [
+    {
+      "width": 1440,
+      "documentWidth": 1425,
+      "overflow": false,
+      "buttonMinimum": 44
+    },
+    {
+      "width": 1024,
+      "documentWidth": 1009,
+      "overflow": false,
+      "buttonMinimum": 44
+    },
+    {
+      "width": 768,
+      "documentWidth": 753,
+      "overflow": false,
+      "buttonMinimum": 44
+    },
+    {
+      "width": 360,
+      "documentWidth": 345,
+      "overflow": false,
+      "buttonMinimum": 44
+    }
+  ],
+  "reduced": {
+    "enabled": true,
+    "buttonDuration": "0s, 0s, 0s",
+    "spinnerAnimation": "none",
+    "rowAnimation": "none"
+  },
+  "contrasts": [
+    {
+      "selector": "body",
+      "color": "rgb(28, 48, 38)",
+      "background": "rgb(245, 247, 243)",
+      "border": "rgb(28, 48, 38)",
+      "ratio": 12.99
+    },
+    {
+      "selector": ".ui-muted",
+      "color": "rgb(88, 103, 94)",
+      "background": "rgb(245, 247, 243)",
+      "border": "rgb(88, 103, 94)",
+      "ratio": 5.54
+    },
+    {
+      "selector": ".ui-button--primary",
+      "color": "rgb(255, 255, 255)",
+      "background": "rgb(31, 90, 67)",
+      "border": "rgb(31, 90, 67)",
+      "ratio": 8.07
+    },
+    {
+      "selector": "a.ui-button--primary",
+      "color": "rgb(255, 255, 255)",
+      "background": "rgb(31, 90, 67)",
+      "border": "rgb(31, 90, 67)",
+      "ratio": 8.07
+    },
+    {
+      "selector": ".ui-badge--warning",
+      "color": "rgb(130, 83, 7)",
+      "background": "rgb(255, 244, 220)",
+      "border": "rgb(130, 83, 7)",
+      "ratio": 6.03
+    },
+    {
+      "selector": ".ui-badge--danger",
+      "color": "rgb(180, 49, 58)",
+      "background": "rgb(255, 240, 240)",
+      "border": "rgb(180, 49, 58)",
+      "ratio": 5.51
+    },
+    {
+      "selector": ".ui-badge--success",
+      "color": "rgb(35, 98, 68)",
+      "background": "rgb(237, 245, 238)",
+      "border": "rgb(35, 98, 68)",
+      "ratio": 6.51
+    },
+    {
+      "selector": ".ui-badge--info",
+      "color": "rgb(36, 92, 117)",
+      "background": "rgb(237, 245, 251)",
+      "border": "rgb(36, 92, 117)",
+      "ratio": 6.66
+    },
+    {
+      "selector": ".ui-input",
+      "color": "rgb(28, 48, 38)",
+      "background": "rgb(255, 255, 255)",
+      "border": "rgb(124, 139, 130)",
+      "ratio": 14
+    }
+  ],
+  "errors": [],
+  "modalMotion": {
+    "manual": [
+      {
+        "selector": ".ui-dialog",
+        "duration": "0s"
+      },
+      {
+        "selector": ".ui-dialog .modal-dialog",
+        "duration": "0s, 0s"
+      },
+      {
+        "selector": ".ui-sidebar",
+        "duration": "0s"
+      },
+      {
+        "selector": ".ui-button",
+        "duration": "0s, 0s, 0s"
+      }
+    ],
+    "reduced": [
+      {
+        "selector": ".ui-dialog",
+        "duration": "0s"
+      },
+      {
+        "selector": ".ui-dialog .modal-dialog",
+        "duration": "0s, 0s"
+      },
+      {
+        "selector": ".ui-sidebar",
+        "duration": "0s"
+      },
+      {
+        "selector": ".ui-button",
+        "duration": "0s, 0s, 0s"
+      }
+    ]
+  },
+  "originalFilesVerified": 141,
+  "originalFilesChanged": []
+}
